@@ -31,7 +31,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,15,40,0
 .nav-logo-text .ey{font-family:"Oswald",sans-serif;font-size:11px;font-weight:400;color:rgba(255,255,255,0.4);letter-spacing:2.5px;text-transform:uppercase}
 .nav-logo-text .nm{font-family:"Bebas Neue",sans-serif;font-size:21px;color:var(--white);letter-spacing:1px}
 nav ul{display:flex;list-style:none;gap:2px;align-items:center}
-nav a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:0.4px;padding:8px 14px;border-radius:5px;transition:color 0.2s,background 0.2s}
+nav a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:0.4px;padding:8px 14px;border-radius:4px;transition:color 0.2s,background 0.2s}
 nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .nav-right{display:flex;align-items:center;gap:16px}
 .ig-link{color:rgba(255,255,255,0.55);display:flex;align-items:center;transition:color 0.2s;text-decoration:none}
@@ -39,7 +39,7 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .btn-cta{background:var(--blue);color:var(--white);font-family:"Oswald",sans-serif;font-size:13px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;padding:9px 20px;border-radius:5px;text-decoration:none;transition:background 0.2s,transform 0.15s;white-space:nowrap}
 .btn-cta:hover{background:var(--blue-light);transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
-.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:0.3s}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:4px;transition:0.3s}
 
 .mobile-nav{display:none;position:fixed;top:72px;left:0;right:0;z-index:99;background:rgba(6,15,40,0.99);backdrop-filter:blur(12px);padding:20px 24px 28px;flex-direction:column;gap:2px;border-bottom:1px solid rgba(30,91,255,0.1)}
 .mobile-nav.open{display:flex}
@@ -62,7 +62,7 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .hero h1 .acc{color:var(--white)}
 .hero p{font-size:clamp(15px,1.8vw,18px);color:rgba(255,255,255,0.7);line-height:1.75;max-width:600px;margin:0 auto 44px;font-weight:300}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn-outline{border:1.5px solid rgba(255,255,255,0.35);color:var(--white);font-family:"Oswald",sans-serif;font-size:13px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;padding:9px 20px;border-radius:5px;text-decoration:none;transition:border-color 0.2s,background 0.2s}
+.btn-outline{border:1.5px solid rgba(255,255,255,0.35);color:var(--white);font-family:"Oswald",sans-serif;font-size:13px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;padding:9px 20px;border-radius:4px;text-decoration:none;transition:border-color 0.2s,background 0.2s}
 .btn-outline:hover{border-color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.07)}
 .hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;z-index:2}
 .scroll-line{width:1px;height:44px;background:linear-gradient(to bottom,var(--blue),transparent);animation:pulse 2s ease-in-out infinite}
@@ -70,8 +70,8 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 
 .stats-bar{
     background:#fff;
-    border-top:2px solid #0055ff;
-    border-bottom:2px solid #0055ff;
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff;
 }
 
 .stats-inner{
@@ -88,7 +88,7 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
     align-items:center;
     text-align:center;
     padding:18px 10px;
-border-right:2px solid #0055ff;
+border-right:2px solid #fff;
 }
 
 .stat-item:last-child{
@@ -133,7 +133,7 @@ section{padding:100px 100px}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .about-img-wrap{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3}
 .about-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-.about-badge{position:absolute;bottom:20px;left:20px;background:var(--blue);color:var(--white);font-family:"Oswald",sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:8px 14px;border-radius:3px}
+.about-badge{position:absolute;bottom:20px;left:20px;background:var(--blue);color:var(--white);font-family:"Oswald",sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:8px 14px;border-radius:4px}
 .about-text .sec-sub{max-width:none;margin-bottom:36px}
 .pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
 .pillar{background:var(--white);border-left:3px solid var(--blue);padding:16px 18px;border-radius:0 3px 3px 0}
@@ -217,7 +217,7 @@ section{padding:100px 100px}
     letter-spacing:3px;
     text-transform:uppercase;
     padding:8px 20px;
-    border-radius:40px;
+    border-radius:4px;
     margin-bottom:26px;
 }
 
@@ -243,7 +243,7 @@ section{padding:100px 100px}
 .hora-table{
     min-width:900px;
     margin-bottom:32px;
-    border-radius:6px;
+    border-radius:4px;
     overflow:hidden;
     border:2px solid #3a72ff;
 }
@@ -427,7 +427,7 @@ section{padding:100px 100px}
 .contato .sec-eyebrow{font-size:14px;letter-spacing:5px}
 .lider-head .sec-title{margin-bottom:6px}
 .lider-sub{font-family:"Oswald",sans-serif;font-size:18px;font-weight:500;letter-spacing:1px;color:var(--blue);text-transform:uppercase}
-.lider-logos{margin:0 auto 52px;max-width:1280px;display:flex;justify-content:center;border:2px solid var(--blue);border-radius:8px;overflow:hidden;box-sizing:border-box}
+.lider-logos{margin:0 auto 52px;max-width:1280px;display:flex;justify-content:center;border:2px solid var(--blue);border-radius:1px;overflow:hidden;box-sizing:border-box}
 .lider-logos img{max-width:100%;height:auto;display:block}
 .lider-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:880px;margin:0 auto 56px}
 .lider-stat{background:var(--white);border-left:3px solid var(--blue);border-radius:0 4px 4px 0;padding:26px 20px;text-align:center}
@@ -522,59 +522,211 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 .uniformes-grid{
 
     display:flex;
-    flex-direction:column;
-    gap:45px;
+    justify-content:center;
+    gap:32px;
+    margin-top:60px;
 
 }
 
-.uniforme-card{
+.uniforme-card:hover{
 
-    width:100%;
-
-}
-
-.uniforme-img{
-
-    position:relative;
-    overflow:hidden;
-    border-radius:8px;
-    background:#eceff5;
+    transform:translateY(-10px);
 
 }
+
 
 .uniforme-img img{
 
     width:100%;
+    height:auto;
     display:block;
-    transition:.45s;
 
 }
-
-.uniforme-img:hover img{
+.uniforme-card:hover .uniforme-img img{
 
     transform:scale(1.03);
 
 }
 
-.uniforme-overlay{
+.uniforme-card:hover .uniforme-img{
 
-    position:absolute;
-    left:35px;
-    bottom:35px;
-
-    background:rgba(6,15,40,.90);
-
-    padding:18px 26px;
-
-    border-left:4px solid var(--blue);
-
-    backdrop-filter:blur(10px);
+    box-shadow:0 22px 30px rgba(10,30,74,.18);
 
 }
 
-.uniforme-overlay span{
+.uniformes-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,320px);
+    justify-content:center;
+    gap:42px;
+    margin-top:25px;
+
+}
+
+.uniforme-card{
+    display:flex;
+    flex-direction:column;
+}
+
+.uniforme-img{
+    border-radius:4px;
+    overflow:hidden;
+    background:#eceff5;
+}
+
+.uniforme-img img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.uniforme-info{
+    margin-top:18px;
+    padding:24px 28px;
+
+    background:var(--navy);
+    border-left:4px solid var(--blue);
+    border-radius:4px;
+
+    min-height:110px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.uniforme-info span{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:34px;
+    color:#fff;
+}
+
+.uniforme-info small{
+    margin-top:6px;
+    font-family:"Oswald",sans-serif;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.65);
+}
+
+.uniforme-card:hover{
+    transform:translateY(-8px);
+    transition:.3s;
+}
+
+.uniforme-card:hover .uniforme-img img{
+    transform:scale(1.03);
+    transition:.3s;
+}
+
+.uniforme-card:hover .uniforme-info{
+
+    background:#12244f;
+
+}
+
+.uniforme-info span{
 
     display:block;
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:34px;
+
+    letter-spacing:.5px;
+
+    color:#fff;
+
+}
+
+.uniforme-info small{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-family:"Oswald",sans-serif;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:rgba(255,255,255,.65);
+
+}
+.investimento{
+
+    background:#fff;
+    padding:110px 0;
+
+}
+
+.investimento .sec-sub{
+
+    max-width:760px;
+    margin:0 auto;
+    text-align:center;
+
+}
+
+/* GRID */
+
+.investimento-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+
+    max-width:900px;
+    margin:60px auto 40px;
+
+}
+
+/* CARD */
+
+.investimento-card{
+
+    background:var(--navy);
+
+    border-radius:4px;
+
+    padding:34px;
+
+    transition:.35s ease;
+
+    box-shadow:0 18px 40px rgba(blue);
+
+}
+
+.investimento-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 28px 60px rgba(10,30,74,.15);
+
+}
+
+/* TOPO */
+
+.investimento-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:20px;
+
+}
+
+/* TITULO */
+
+.investimento-card h3{
 
     font-family:"Bebas Neue",sans-serif;
 
@@ -586,23 +738,299 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
 }
 
-.uniforme-overlay small{
+/* PREÇO */
+
+.valor{
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:42px;
+
+    color:var(--blue);
+
+    white-space:nowrap;
+
+}
+
+/* TEXTO */
+
+.investimento-card p{
+
+    color:rgba(255,255,255,.70);
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+/* TOTAL */
+
+.investimento-total{
+
+    max-width:420px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.investimento-total small{
 
     display:block;
 
-    margin-top:6px;
+    font-family:"Oswald",sans-serif;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:var(--blue);
+
+    margin-bottom:10px;
+
+}
+
+.investimento-total strong{
+
+    display:block;
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:64px;
+
+    color:var(--blue);
+
+    letter-spacing:1px;
+
+    line-height:1;
+
+}
+
+.investimento-total p{
+
+    margin-top:16px;
+
+    color:#6d7890;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+/*==================================================
+CTA MATRÍCULA
+==================================================*/
+
+.cta-section{
+
+    padding:90px 0;
+
+}
+
+.cta-section .container{
+
+    max-width:1100px;
+    margin:auto;
+
+}
+
+.cta-card{
+
+    background:var(--navy);
+
+    border-radius:4px;
+
+    padding:24px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    margin-bottom:28px;
+
+    box-shadow:0 18px 45px rgba(10,30,74,.15);
+
+    transition:.3s;
+
+}
+
+.cta-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.cta-content{
+
+    flex:1;
+
+}
+
+.cta-step{
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    color:var(--blue);
 
     font-family:"Oswald",sans-serif;
+
+    font-size:14px;
 
     letter-spacing:2px;
 
     text-transform:uppercase;
 
-    color:rgba(255,255,255,.65);
+}
 
-    font-size:11px;
+.cta-content h3{
+
+    color:#fff;
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+    line-height:1.1;
 
 }
+
+.cta-content p{
+
+    color:rgba(255,255,255,.85);
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+/* BOTÕES */
+
+.btn-nextfit,
+.btn-whatsapp{
+
+    width:250px;
+
+    height:60px;
+
+    border-radius:4px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-family:"Oswald",sans-serif;
+
+    font-size:17px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    flex-shrink:0;
+
+}
+
+.btn-nextfit{
+
+    background:#fff;
+
+    color:#6C2BD9;
+
+}
+
+.btn-nextfit:hover{
+
+    background:#f2f2f2;
+
+    transform:translateY(-3px);
+
+}
+
+.btn-whatsapp{
+
+    background:#11a246;
+
+    color:#fff;
+
+}
+
+.btn-whatsapp:hover{
+
+    background:#1fb458;
+
+    transform:translateY(-3px);
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    .cta-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:32px 25px;
+
+    }
+
+    .btn-nextfit,
+    .btn-whatsapp{
+
+        width:100%;
+
+    }
+
+}
+/* RESPONSIVO */
+
+@media(max-width:900px)
+
+    .investimento-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .investimento-top{
+
+        flex-direction:column;
+        gap:12px;
+
+    }
+
+    .valor{
+
+        font-size:38px;
+
+    }
+
+    .investimento-total strong{
+
+        font-size:52px;
+
+    }
+
+
 .professores{
     background:#fff;
     padding:90px 0;
@@ -623,7 +1051,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
     width:100%;
     aspect-ratio:4/5;
     object-fit:cover;
-    border-radius:12px;
+    border-radius:4px;
     border:2px solid #D6E5FF;
     transition:.3s;
 }
@@ -872,6 +1300,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
     </div>
   </div>
 </section>
+
 <section class="uniformes" id="uniformes">
 
     <div class="container">
@@ -891,50 +1320,172 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
         <div class="uniformes-grid">
 
+            <!-- Futebol -->
             <article class="uniforme-card rv">
 
                 <div class="uniforme-img">
+                    <img src="image/unif1.jpeg" alt="Uniforme Futebol">
+                </div>
 
-                    <img src="image/uniforme-futebol.png" alt="Uniforme Futebol">
-
-                    <div class="uniforme-overlay">
-                        <span>⚽ Futebol</span>
-                        <small>Uniforme Oficial</small>
-                    </div>
-
+                <div class="uniforme-info">
+                    <span>Futebol</span>
+                    <small>Uniforme Oficial</small>
                 </div>
 
             </article>
 
+            <!-- Vôlei Masculino -->
             <article class="uniforme-card rv d1">
 
                 <div class="uniforme-img">
+                    <img src="image/unif2.jpeg" alt="Uniforme Vôlei Masculino">
+                </div>
 
-                    <img src="image/uniforme-volei-masculino.png" alt="Uniforme Vôlei Masculino">
-
-                    <div class="uniforme-overlay">
-                        <span>🏐 Vôlei Masculino</span>
-                        <small>Uniforme Oficial</small>
-                    </div>
-
+                <div class="uniforme-info">
+                    <span>Vôlei Masculino</span>
+                    <small>Uniforme Oficial</small>
                 </div>
 
             </article>
 
+            <!-- Vôlei Feminino -->
             <article class="uniforme-card rv d2">
 
                 <div class="uniforme-img">
+                    <img src="image/unif3.jpeg" alt="Uniforme Vôlei Feminino">
+                </div>
 
-                    <img src="image/uniforme-volei-feminino.png" alt="Uniforme Vôlei Feminino">
-
-                    <div class="uniforme-overlay">
-                        <span>🏐 Vôlei Feminino</span>
-                        <small>Uniforme Oficial</small>
-                    </div>
-
+                <div class="uniforme-info">
+                    <span>Vôlei Feminino</span>
+                    <small>Uniforme Oficial</small>
                 </div>
 
             </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="investimento" id="investimento">
+
+    <div class="container">
+
+        <div class="sec-eyebrow rv">
+            Investimento Inicial
+        </div>
+
+        <h2 class="sec-title rv d1">
+            Comece sua jornada no Independente.
+        </h2>
+
+        <p class="sec-sub rv d2">
+            Para iniciar suas atividades no clube, é necessário realizar a matrícula e adquirir o uniforme oficial da modalidade escolhida.
+        </p>
+
+        <div class="investimento-grid">
+
+            <!-- Matrícula -->
+            <article class="investimento-card rv">
+
+                <div class="investimento-top">
+
+                    <h3>Matrícula</h3>
+
+                    <span class="valor">
+                        R$ 50,00
+                    </span>
+
+                </div>
+
+                <p>
+                    Taxa única para efetivar a inscrição do aluno.
+                </p>
+
+            </article>
+
+            <!-- Uniforme -->
+            <article class="investimento-card rv d1">
+
+                <div class="investimento-top">
+
+                    <h3>Uniforme Oficial</h3>
+
+                    <span class="valor">
+                        R$ 150,00
+                    </span>
+
+                </div>
+
+                <p>
+                    Obrigatório para treinamentos e competições.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="investimento-total rv d2">
+
+            <small>Investimento Inicial</small>
+
+            <strong>R$ 200,00</strong>
+
+            <p>
+                Após esse investimento, o aluno paga apenas a mensalidade da modalidade.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <!-- Card Matrícula -->
+        <div class="cta-card">
+
+            <div class="cta-content">
+
+                <span class="cta-step">1º PASSO</span>
+
+                <h3>Realize sua matrícula online</h3>
+
+                <p>
+                    Escolha sua modalidade e conclua sua inscrição pelo sistema
+                    Next Fit de forma rápida, prática e segura.
+                </p>
+
+            </div>
+
+            <a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/" target="_blank" class="btn-nextfit">
+                REALIZAR MATRÍCULA
+            </a>
+
+        </div>
+
+        <!-- Card WhatsApp -->
+        <div class="cta-card">
+
+            <div class="cta-content">
+
+                <span class="cta-step">2º PASSO</span>
+
+                <h3>Matrícula concluída?</h3>
+
+                <p>
+                    Entre em contato pelo WhatsApp para solicitar seu uniforme
+                    oficial e receber todas as orientações da equipe.
+                </p>
+
+            </div>
+
+            <a href="https://wa.me/5516996167588" target="_blank" class="btn-whatsapp">
+                FALAR NO WHATSAPP
+            </a>
 
         </div>
 
