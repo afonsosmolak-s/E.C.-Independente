@@ -235,15 +235,23 @@ section{padding:100px 100px}
     font-weight:500;
     margin-bottom:36px;
 }
-
-.hora-table{
+.table-box{
     width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+.hora-table{
+    min-width:900px;
     margin-bottom:32px;
     border-radius:6px;
     overflow:hidden;
-border:2px solid #3a72ff;
+    border:2px solid #3a72ff;
 }
-
+.hora-scroll{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
 .hora-row{
     display:grid;
     grid-template-columns:1.5fr repeat(7,1fr);
@@ -869,79 +877,89 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
       <h2 class="sec-title rv">Horários</h2>
 
-      <div class="hora-table">
+      <div class="table-box">
 
-        <div class="hora-row hora-head">
-          <span>Categoria</span>
-          <span>Segunda</span>
-          <span>Terça</span>
-          <span>Quarta</span>
-          <span>Quinta</span>
-          <span>Sexta</span>
-          <span>Sábado</span>
-          <span>Domingo</span>
+        <div class="hora-table">
+
+          <div class="hora-row hora-head">
+            <span>Categoria</span>
+            <span>Segunda</span>
+            <span>Terça</span>
+            <span>Quarta</span>
+            <span>Quinta</span>
+            <span>Sexta</span>
+            <span>Sábado</span>
+            <span>Domingo</span>
+          </div>
+
+          <div class="hora-row">
+            <span>Sub-7</span>
+            <span>17h30–18h30</span>
+            <span>—</span>
+            <span>17h30–18h30</span>
+            <span>—</span>
+            <span>17h30–18h30</span>
+            <span>—</span>
+            <span>—</span>
+          </div>
+
+          <div class="hora-row">
+            <span>Sub-9</span>
+            <span>19h00–20h00</span>
+            <span>—</span>
+            <span>19h00–20h00</span>
+            <span>—</span>
+            <span>19h00–20h00</span>
+            <span>—</span>
+            <span>—</span>
+          </div>
+
+          <div class="hora-row">
+            <span>Sub-11</span>
+            <span>20h30–21h30</span>
+            <span>—</span>
+            <span>20h30–21h30</span>
+            <span>—</span>
+            <span>20h30–21h30</span>
+            <span>—</span>
+            <span>—</span>
+          </div>
+
+          <div class="hora-row">
+            <span>Sub-13</span>
+            <span>22h00–23h00</span>
+            <span>—</span>
+            <span>22h00–23h00</span>
+            <span>—</span>
+            <span>22h00–23h00</span>
+            <span>—</span>
+            <span>—</span>
+          </div>
+
+          <div class="hora-row">
+            <span>Sub-15</span>
+            <span>22h00–23h00</span>
+            <span>—</span>
+            <span>22h00–23h00</span>
+            <span>—</span>
+            <span>22h00–23h00</span>
+            <span>—</span>
+            <span>—</span>
+          </div>
+
         </div>
 
-<div class="hora-row">
-    <span>Sub-7</span>
-    <span>17h30–18h30</span>
-    <span>—</span>
-    <span>17h30–18h30</span>
-    <span>—</span>
-    <span>17h30–18h30</span>
-    <span>—</span> <!-- Sábado -->
-    <span>—</span> <!-- Domingo -->
-</div>
-<div class="hora-row">
-    <span>Sub-9</span>
-    <span>19h00–20h00</span>
-    <span>—</span>
-    <span>19h00–20h00</span>
-    <span>—</span>
-    <span>19h00–20h00</span>
-    <span>—</span> <!-- Sábado -->
-    <span>—</span> <!-- Domingo -->
-</div>
+      </div>
 
-<div class="hora-row">
-    <span>Sub-11</span>
-    <span>20h30–21h30</span>
-    <span>—</span>
-    <span>20h30–21h30</span>
-    <span>—</span>
-    <span>20h30–21h30</span>
-    <span>—</span> <!-- Sábado -->
-    <span>—</span> <!-- Domingo -->
-</div>
+      <p class="hora-texto">
+        Nosso Centro de Treinamento está em fase final de construção. Em breve, a grade completa de horários estará disponível para todas as modalidades.
+      </p>
 
-<div class="hora-row">
-    <span>Sub-13</span>
-    <span>22h00–23h00</span>
-    <span>—</span>
-    <span>22h00–23h00</span>
-    <span>—</span>
-    <span>22h00–23h00</span>
-    <span>—</span> <!-- Sábado -->
-    <span>—</span> <!-- Domingo -->
-</div>
-<div class="hora-row">
-    <span>Sub-15</span>
-    <span>22h00–23h00</span>
-    <span>—</span>
-    <span>22h00–23h00</span>
-    <span>—</span>
-    <span>22h00–23h00</span>
-    <span>—</span> <!-- Sábado -->
-    <span>—</span> <!-- Domingo -->
-</div>
+      <p class="hora-aviso">
+        * Os horários de sábado e domingo variam conforme amistosos, campeonatos e eventos do clube.
+      </p>
 
-<p class="hora-texto">
-    Nosso Centro de Treinamento está em fase final de construção. Em breve, a grade completa de horários estará disponível para todas as modalidades.
-</p>
-<p class="hora-aviso">
-    * Os horários de sábado e domingo variam conforme amistosos, campeonatos e eventos do clube.
-</p>
-</div>
+    </div>
   </div>
 </section>
 
