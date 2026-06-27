@@ -557,10 +557,8 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 .uniformes-grid{
 
     display:grid;
-    grid-template-columns:repeat(3,320px);
-    justify-content:center;
+    grid-template-columns:repeat(3,1fr);
     gap:42px;
-    margin-top:25px;
 
 }
 
@@ -656,6 +654,35 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
     letter-spacing:2px;
 
     color:rgba(255,255,255,.65);
+
+}
+@media (max-width:768px){
+
+    .uniformes{
+
+        padding:70px 0;
+
+    }
+
+    .uniformes-grid{
+
+        grid-template-columns:1fr;
+        gap:30px;
+
+    }
+
+    .uniforme-info{
+
+        min-height:auto;
+        padding:22px;
+
+    }
+
+    .uniforme-info span{
+
+        font-size:28px;
+
+    }
 
 }
 .investimento{
