@@ -505,7 +505,104 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
     opacity:.8;
 }
 /* ===== PROFESSORES ===== */
+.uniformes{
 
+    background:#f7f8fb;
+    padding:110px 0;
+
+}
+
+.uniformes .sec-sub{
+
+    max-width:700px;
+    margin-bottom:60px;
+
+}
+
+.uniformes-grid{
+
+    display:flex;
+    flex-direction:column;
+    gap:45px;
+
+}
+
+.uniforme-card{
+
+    width:100%;
+
+}
+
+.uniforme-img{
+
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+    background:#eceff5;
+
+}
+
+.uniforme-img img{
+
+    width:100%;
+    display:block;
+    transition:.45s;
+
+}
+
+.uniforme-img:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.uniforme-overlay{
+
+    position:absolute;
+    left:35px;
+    bottom:35px;
+
+    background:rgba(6,15,40,.90);
+
+    padding:18px 26px;
+
+    border-left:4px solid var(--blue);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.uniforme-overlay span{
+
+    display:block;
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:36px;
+
+    color:#fff;
+
+    letter-spacing:.5px;
+
+}
+
+.uniforme-overlay small{
+
+    display:block;
+
+    margin-top:6px;
+
+    font-family:"Oswald",sans-serif;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:11px;
+
+}
 .professores{
     background:#fff;
     padding:90px 0;
@@ -774,6 +871,75 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
       <cite>— Léo Castro</cite>
     </div>
   </div>
+</section>
+<section class="uniformes" id="uniformes">
+
+    <div class="container">
+
+        <div class="sec-eyebrow rv">
+            Uniformes Oficiais
+        </div>
+
+        <h2 class="sec-title rv d1">
+            Vista as cores do Independente.
+        </h2>
+
+        <p class="sec-sub rv d2">
+            Cada modalidade possui seu uniforme oficial, desenvolvido para representar
+            o Esporte Clube Independente dentro e fora das quadras.
+        </p>
+
+        <div class="uniformes-grid">
+
+            <article class="uniforme-card rv">
+
+                <div class="uniforme-img">
+
+                    <img src="image/uniforme-futebol.png" alt="Uniforme Futebol">
+
+                    <div class="uniforme-overlay">
+                        <span>⚽ Futebol</span>
+                        <small>Uniforme Oficial</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="uniforme-card rv d1">
+
+                <div class="uniforme-img">
+
+                    <img src="image/uniforme-volei-masculino.png" alt="Uniforme Vôlei Masculino">
+
+                    <div class="uniforme-overlay">
+                        <span>🏐 Vôlei Masculino</span>
+                        <small>Uniforme Oficial</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="uniforme-card rv d2">
+
+                <div class="uniforme-img">
+
+                    <img src="image/uniforme-volei-feminino.png" alt="Uniforme Vôlei Feminino">
+
+                    <div class="uniforme-overlay">
+                        <span>🏐 Vôlei Feminino</span>
+                        <small>Uniforme Oficial</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
 </section>
 
 <section class="planos" id="planos">
