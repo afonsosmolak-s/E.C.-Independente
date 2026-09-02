@@ -85,107 +85,76 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .hero-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:2.2px;text-transform:uppercase;font-weight:500;z-index:2}
 .scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,var(--blue),transparent);animation:pulse 2s ease-in-out infinite}
 
-/* HERO CAMPAIGN — MATRÍCULAS (BADGE OFERTA) */
+/* HERO CAMPAIGN — MATRÍCULAS (BADGE MINIMAL PREMIUM) */
 .hero-offer{
     display:inline-flex;
-    align-items:stretch;
-    gap:0;
-    margin-bottom:26px;
-    background:#10b981;
-    border-radius:14px;
-    box-shadow:
-        0 0 0 1px rgba(255,255,255,.10),
-        0 14px 36px rgba(16,185,129,.30),
-        0 0 60px rgba(16,185,129,.18);
-    overflow:hidden;
-    max-width:100%;
-    position:relative;
-    animation:offerFloat 3s ease-in-out infinite;
-}
-@keyframes offerFloat{
-    0%,100%{transform:translateY(0) scale(1)}
-    50%{transform:translateY(-3px) scale(1.01)}
-}
-.hero-offer::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
-    transform:translateX(-100%);
-    animation:offerShine 3.2s ease-in-out infinite;
-    pointer-events:none;
-}
-@keyframes offerShine{
-    0%{transform:translateX(-100%)}
-    60%,100%{transform:translateX(100%)}
-}
-.hero-offer-flame{
-    display:flex;
     align-items:center;
-    justify-content:center;
-    padding:0 16px;
-    background:rgba(0,0,0,.15);
+    gap:14px;
+    margin-bottom:28px;
+    padding:8px 8px 8px 18px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:100px;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    max-width:100%;
 }
 .hero-offer-dot{
-    width:10px;
-    height:10px;
-    background:#eaffef;
+    width:8px;
+    height:8px;
+    background:#22c55e;
     border-radius:50%;
-    box-shadow:0 0 0 0 rgba(255,255,255,.9);
-    animation:offerDot 1.6s ease-in-out infinite;
+    box-shadow:0 0 0 0 rgba(34,197,94,.8);
+    animation:offerDot 1.8s ease-in-out infinite;
+    flex-shrink:0;
 }
 @keyframes offerDot{
-    0%{box-shadow:0 0 0 0 rgba(255,255,255,.8)}
-    70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}
-    100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
+    0%{box-shadow:0 0 0 0 rgba(34,197,94,.7)}
+    70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}
+    100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}
 }
 .hero-offer-content{
     display:flex;
-    flex-direction:column;
-    padding:11px 18px;
-    text-align:left;
+    align-items:center;
+    gap:8px;
+    font-family:"Plus Jakarta Sans",sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    color:rgba(255,255,255,.90);
+    letter-spacing:0.1px;
+    white-space:nowrap;
 }
 .hero-offer-eyebrow{
     font-family:"Oswald",sans-serif;
-    font-size:9.5px;
-    font-weight:600;
-    letter-spacing:2.2px;
-    text-transform:uppercase;
-    color:rgba(255,255,255,.95);
-    line-height:1;
-    margin-bottom:5px;
-}
-.hero-offer-title{
-    font-family:"Oswald",sans-serif;
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-    color:#fff;
-    line-height:1.1;
-    white-space:nowrap;
-}
-.hero-offer-title strong{
-    font-family:"Bebas Neue",sans-serif;
-    font-size:22px;
-    letter-spacing:1px;
-    color:#fff;
-    text-shadow:0 2px 8px rgba(0,0,0,.25);
-    margin:0 2px;
-    vertical-align:-1px;
-    font-weight:400;
-}
-.hero-offer-side{
-    display:flex;
-    align-items:center;
-    padding:0 16px;
-    background:rgba(0,0,0,.22);
-    font-family:"Oswald",sans-serif;
     font-size:10px;
     font-weight:600;
-    letter-spacing:1.8px;
+    letter-spacing:2px;
     text-transform:uppercase;
+    color:rgba(255,255,255,.55);
+}
+.hero-offer-eyebrow::after{
+    content:"·";
+    margin-left:8px;
+    color:rgba(255,255,255,.35);
+}
+.hero-offer-title{
+    color:rgba(255,255,255,.92);
+}
+.hero-offer-title strong{
+    font-weight:700;
     color:#fff;
+    margin:0 2px;
+}
+.hero-offer-side{
+    background:#22c55e;
+    color:#062e14;
+    font-family:"Oswald",sans-serif;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    padding:8px 14px;
+    border-radius:100px;
     white-space:nowrap;
 }
 
@@ -298,13 +267,12 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 }
 
 @media(max-width:560px){
-    .hero-offer{flex-wrap:wrap;border-radius:12px}
-    .hero-offer-flame{padding:10px 14px;font-size:18px;flex:0 0 auto}
-    .hero-offer-content{padding:8px 14px;flex:1;min-width:0}
+    .hero-offer{padding:6px 6px 6px 14px;gap:10px;max-width:calc(100% - 32px)}
+    .hero-offer-content{flex-direction:column;align-items:flex-start;gap:2px;font-size:11px;white-space:normal;line-height:1.25}
     .hero-offer-eyebrow{font-size:8.5px;letter-spacing:1.6px}
-    .hero-offer-title{font-size:11.5px;letter-spacing:0.3px;white-space:normal}
-    .hero-offer-title strong{font-size:18px}
-    .hero-offer-side{flex:0 0 100%;justify-content:center;padding:6px 14px;font-size:9px}
+    .hero-offer-eyebrow::after{display:none}
+    .hero-offer-title{font-size:11px}
+    .hero-offer-side{font-size:9.5px;letter-spacing:1.2px;padding:6px 10px}
     .hero-countdown{margin:24px auto 24px}
     .countdown-grid{padding:12px 14px;gap:6px}
     .countdown-cell{min-width:44px}
@@ -2825,14 +2793,12 @@ img {
   <div class="hero-content">
 
     <div class="hero-offer">
-      <div class="hero-offer-flame">
-        <span class="hero-offer-dot"></span>
-      </div>
+      <span class="hero-offer-dot"></span>
       <div class="hero-offer-content">
         <span class="hero-offer-eyebrow">Sua vaga te espera</span>
-        <span class="hero-offer-title">MATRÍCULAS 2026 · abrem <strong>07/09</strong></span>
+        <span class="hero-offer-title">Matrículas 2026 abrem em <strong>07/09</strong></span>
       </div>
-      <div class="hero-offer-side">SEGUNDA-FEIRA</div>
+      <span class="hero-offer-side">Segunda</span>
     </div>
 
     <h1>Formando Atletas.<br><span class="acc">Construindo Pessoas.</span></h1>
