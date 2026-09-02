@@ -169,7 +169,7 @@ section{padding:76px 80px}
 .pillar p{font-size:11.5px;color:var(--gray-600);line-height:1.55}
 
 .modalidades{
-    background:#fafbfd;
+    background:#fff;
     padding:76px 0;
     text-align:left;
 }
@@ -280,9 +280,13 @@ CSS PROFESSORES
 .estru-info .btn-cta{flex-shrink:0}
 
 
-.parceiros{background:#fafbfd}
-.sponsors-img{margin-top:32px;text-align:center}
-.sponsors-img img{max-width:60%;height:auto;display:block;margin:0 auto;border-radius:6px}
+.parceiros{background:#fff}
+.parceiros .sec-eyebrow,
+.parceiros .sec-title,
+.parceiros .sec-sub{text-align:center}
+.parceiros .sec-sub{max-width:560px;margin:14px auto 0}
+.sponsors-img{margin-top:40px;text-align:center}
+.sponsors-img img{max-width:100%;width:100%;height:auto;display:block;margin:0 auto}
 .sponsors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:52px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:4px;overflow:hidden}
 .sp-card{background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;padding:28px 24px;aspect-ratio:5/3;border-right:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04);transition:background 0.25s;overflow:hidden}
 .sp-card:hover{background:rgba(255,255,255,0.07)}
@@ -322,56 +326,72 @@ CSS PROFESSORES
     width:100%;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:32px;
+    gap:14px;
     align-items:stretch;
+    max-width:640px;
+    margin:0 auto;
 }
 
 .contato-card{
-    background:var(--navy-deep);
-    border:1px solid rgba(255,255,255,.06);
-    border-radius:6px;
-    padding:38px 32px;
+    background:#fff;
+    border:1px solid rgba(10,30,74,.08);
+    border-radius:12px;
+    padding:20px 22px;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     align-items:center;
-    justify-content:center;
-    text-align:center;
-    gap:12px;
-    transition:transform .25s,border-color .25s;
+    justify-content:flex-start;
+    text-align:left;
+    gap:14px;
+    transition:transform .25s,border-color .25s,box-shadow .25s;
+    text-decoration:none;
 }
 
 .contato-card:hover{
-    transform:translateY(-4px);
+    transform:translateY(-3px);
     border-color:var(--blue);
+    box-shadow:0 10px 30px rgba(10,30,74,.08);
 }
 
 .c-icon{
-    width:40px;
-    height:40px;
-    background:var(--blue);
-    border-radius:50%;
+    width:36px;
+    height:36px;
+    background:rgba(30,91,255,.10);
+    border-radius:10px;
     display:flex;
     align-items:center;
     justify-content:center;
+    flex-shrink:0;
 }
 .c-icon i{
-    color:#fff;
-    font-size:17px;
+    color:var(--blue);
+    font-size:15px;
+}
+
+.contato-card-text{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    min-width:0;
 }
 
 .c-label{
     font-size:9px;
     color:var(--gray-400);
-    letter-spacing:2px;
+    letter-spacing:1.6px;
     text-transform:uppercase;
     font-weight:600;
 }
 
 .c-val{
     font-family:"Oswald",sans-serif;
-    font-size:14px;
-    color:#fff;
+    font-size:13px;
+    color:var(--navy);
     font-weight:500;
+    letter-spacing:0.2px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 
 .c-val a{
@@ -382,10 +402,7 @@ CSS PROFESSORES
 .c-val a:hover{
     color:var(--blue-light);
 }
-.c-icon{width:40px;height:40px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.c-icon svg{width:17px;height:17px;fill:rgb(255, 255, 255)}
-.c-label{font-size:9px;color:var(--gray-400);letter-spacing:2px;text-transform:uppercase;font-weight:600}
-.c-val{font-family:"Oswald",sans-serif;font-size:14px;color:var(--white);font-weight:500}
+.c-icon svg{width:15px;height:15px;fill:var(--blue)}
 .c-val a{color:inherit;text-decoration:none;transition:color 0.2s}
 .c-val a:hover{color:var(--blue-light)}
 
@@ -421,6 +438,12 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 .f-col ul a{color:rgba(255,255,255,0.45);text-decoration:none;font-size:12px;transition:color 0.2s}
 .f-col ul a:hover{color:var(--white)}
 .f-bottom{max-width:1200px;margin:0 auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.28)}
+.f-legal{max-width:1200px;margin:0 auto 20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);font-size:10.5px;color:rgba(255,255,255,0.35);line-height:1.7;font-weight:300;text-align:center}
+.f-legal strong{color:rgba(255,255,255,0.55);font-weight:500;letter-spacing:0.3px}
+.f-legal span{display:block}
+@media(max-width:768px){
+    .f-legal{font-size:10px;line-height:1.65}
+}
 
 .rv{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease}
 .rv.in{opacity:1;transform:none}
@@ -441,7 +464,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 /* ===== PROFESSORES ===== */
 .uniformes{
 
-    background:#fafbfd;
+    background:#fff;
     padding:76px 0;
 
 }
@@ -493,7 +516,9 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:28px;
+    gap:20px;
+    max-width:820px;
+    margin:0 auto;
 
 }
 
@@ -505,46 +530,51 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 .uniforme-img{
     border-radius:6px;
     overflow:hidden;
-    background:#eceff5;
-    box-shadow:0 10px 30px rgba(10,30,74,.06);
+    background:#f4f6fa;
+    box-shadow:0 6px 20px rgba(10,30,74,.05);
+    aspect-ratio:4/5;
 }
 
 .uniforme-img img{
     display:block;
     width:100%;
-    height:auto;
+    height:100%;
+    object-fit:cover;
 }
 
 .uniforme-info{
-    margin-top:14px;
-    padding:18px 22px;
+    margin-top:10px;
+    padding:0;
 
-    background:var(--navy);
-    border-left:2px solid var(--blue);
-    border-radius:6px;
+    background:transparent;
+    border-left:none;
+    border-radius:0;
 
     min-height:auto;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
+    text-align:center;
 }
 
 .uniforme-info span{
-    font-family:"Bebas Neue",sans-serif;
-    font-size:22px;
-    color:#fff;
-    letter-spacing:0.4px;
-    font-weight:400;
+    font-family:"Oswald",sans-serif;
+    font-size:13px;
+    color:var(--navy);
+    letter-spacing:0.5px;
+    font-weight:600;
+    text-transform:uppercase;
 }
 
 .uniforme-info small{
-    margin-top:4px;
-    font-family:"Oswald",sans-serif;
-    font-size:9.5px;
-    letter-spacing:1.6px;
-    text-transform:uppercase;
-    color:rgba(255,255,255,.6);
+    margin-top:2px;
+    font-family:"Inter",sans-serif;
+    font-size:10px;
+    letter-spacing:0.5px;
+    text-transform:none;
+    color:var(--gray-400);
+    font-weight:400;
 }
 
 .uniforme-card:hover{
@@ -559,7 +589,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
 .uniforme-card:hover .uniforme-info{
 
-    background:#12244f;
+    background:transparent;
 
 }
 
@@ -773,10 +803,268 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
 }
 /*==================================================
+BOTÃO COMPRAR UNIFORME
+==================================================*/
+.btn-comprar-uniforme{
+    margin-top:18px;
+    width:100%;
+    background:var(--blue);
+    color:#fff;
+    border:none;
+    padding:11px 18px;
+    border-radius:6px;
+    font-family:"Oswald",sans-serif;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    transition:.25s;
+}
+.btn-comprar-uniforme:hover{
+    background:var(--blue-light);
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px rgba(30,91,255,.35);
+}
+.btn-comprar-uniforme i{font-size:12px;transition:transform .25s}
+.btn-comprar-uniforme:hover i{transform:translateX(3px)}
+
+/*==================================================
+MODAL COMPRA DE UNIFORME
+==================================================*/
+.uniforme-modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(6,15,40,0.75);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    opacity:0;
+    transition:opacity .25s;
+}
+.uniforme-modal-overlay.open{
+    display:flex;
+    opacity:1;
+}
+.uniforme-modal{
+    background:#fff;
+    border-radius:14px;
+    max-width:480px;
+    width:100%;
+    max-height:92vh;
+    overflow-y:auto;
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
+    transform:translateY(20px);
+    transition:transform .3s ease;
+}
+.uniforme-modal-overlay.open .uniforme-modal{transform:none}
+
+.uniforme-modal-header{
+    background:var(--navy);
+    padding:22px 28px;
+    border-radius:14px 14px 0 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+}
+.uniforme-modal-header h3{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:22px;
+    color:#fff;
+    letter-spacing:0.5px;
+    line-height:1.1;
+    font-weight:400;
+}
+.uniforme-modal-header small{
+    display:block;
+    margin-top:2px;
+    font-family:"Oswald",sans-serif;
+    font-size:9.5px;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    color:var(--blue);
+    font-weight:600;
+}
+.uniforme-modal-close{
+    background:rgba(255,255,255,.10);
+    border:none;
+    color:#fff;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    flex-shrink:0;
+    transition:.2s;
+}
+.uniforme-modal-close:hover{background:rgba(255,255,255,.20)}
+
+.uniforme-modal-body{padding:26px 28px}
+
+.uniforme-form-group{margin-bottom:16px}
+.uniforme-form-group label{
+    display:block;
+    font-family:"Oswald",sans-serif;
+    font-size:10px;
+    font-weight:600;
+    color:var(--navy);
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    margin-bottom:6px;
+}
+.uniforme-form-group input,
+.uniforme-form-group select{
+    width:100%;
+    padding:10px 12px;
+    border:1px solid rgba(10,30,74,.15);
+    border-radius:6px;
+    font-family:"Inter",sans-serif;
+    font-size:13px;
+    color:var(--navy);
+    background:#fff;
+    transition:border-color .2s,box-shadow .2s;
+    outline:none;
+}
+.uniforme-form-group input:focus,
+.uniforme-form-group select:focus{
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(30,91,255,.12);
+}
+
+.uniforme-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.uniforme-pagamento-opts{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:6px;
+}
+.uniforme-pagamento-opt{
+    border:1px solid rgba(10,30,74,.15);
+    border-radius:8px;
+    padding:12px 10px;
+    text-align:center;
+    cursor:pointer;
+    transition:.2s;
+    background:#fff;
+}
+.uniforme-pagamento-opt input{display:none}
+.uniforme-pagamento-opt-title{
+    font-family:"Oswald",sans-serif;
+    font-size:11px;
+    font-weight:600;
+    color:var(--navy);
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    margin-bottom:2px;
+}
+.uniforme-pagamento-opt-sub{
+    font-size:10px;
+    color:var(--gray-400);
+    line-height:1.3;
+}
+.uniforme-pagamento-opt:has(input:checked){
+    border-color:var(--blue);
+    background:rgba(30,91,255,.06);
+    box-shadow:0 4px 12px rgba(30,91,255,.10);
+}
+
+.uniforme-total-box{
+    background:#f4f6fa;
+    border-radius:8px;
+    padding:14px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:18px 0 20px;
+}
+.uniforme-total-box small{
+    display:block;
+    font-family:"Oswald",sans-serif;
+    font-size:9.5px;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    color:var(--gray-400);
+    font-weight:600;
+    margin-bottom:2px;
+}
+.uniforme-total-box strong{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:22px;
+    color:var(--navy);
+    letter-spacing:0.4px;
+    font-weight:400;
+}
+.uniforme-total-value{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:30px;
+    color:var(--blue);
+    letter-spacing:0.5px;
+    font-weight:400;
+    line-height:1;
+}
+
+.btn-gerar-pdf{
+    width:100%;
+    background:#11a246;
+    color:#fff;
+    border:none;
+    padding:14px 20px;
+    border-radius:8px;
+    font-family:"Oswald",sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    transition:.25s;
+}
+.btn-gerar-pdf:hover{
+    background:#0e8f3d;
+    transform:translateY(-1px);
+    box-shadow:0 10px 24px rgba(17,162,70,.30);
+}
+.btn-gerar-pdf i{font-size:16px}
+
+.uniforme-info-nota{
+    margin-top:14px;
+    padding:12px 14px;
+    background:#fff8e6;
+    border-left:3px solid #f5b425;
+    border-radius:0 6px 6px 0;
+    font-size:11.5px;
+    color:#6b5410;
+    line-height:1.5;
+}
+
+@media(max-width:560px){
+    .uniforme-modal-header{padding:18px 20px}
+    .uniforme-modal-header h3{font-size:19px}
+    .uniforme-modal-body{padding:20px}
+    .uniforme-form-row{grid-template-columns:1fr}
+    .uniforme-pagamento-opts{grid-template-columns:1fr}
+}
+
+/*==================================================
 COMBO FAMÍLIA
 ==================================================*/
 .combo-familia{
-    background:#fafbfd;
+    background:#fff;
     padding:76px 0;
 }
 .combo-familia .sec-eyebrow,
@@ -903,7 +1191,7 @@ CTA MATRÍCULA
    ========================================================= */
 
 .valores {
-    background: var(--gray-100);
+    background: #fff;
     padding: 76px 0;
 }
 
@@ -913,6 +1201,132 @@ CTA MATRÍCULA
     margin: 0 auto;
 }
 
+/* NOVO GRID DE CARDS DE VALORES */
+.valores-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:40px;
+    max-width:1080px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.valor-card{
+    background:#fff;
+    border:1px solid rgba(10,30,74,.08);
+    border-radius:10px;
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    transition:.25s;
+    position:relative;
+    overflow:hidden;
+}
+.valor-card::before{
+    content:"";
+    position:absolute;
+    left:0;top:0;bottom:0;
+    width:3px;
+    background:var(--blue);
+    opacity:0;
+    transition:.25s;
+}
+.valor-card:hover{
+    transform:translateY(-2px);
+    border-color:rgba(30,91,255,.3);
+    box-shadow:0 10px 26px rgba(10,30,74,.08);
+}
+.valor-card:hover::before{opacity:1}
+.valor-card-info{
+    min-width:0;
+    flex:1;
+}
+.valor-card-nome{
+    font-family:"Oswald",sans-serif;
+    font-size:11.5px;
+    font-weight:600;
+    color:var(--navy);
+    letter-spacing:0.3px;
+    text-transform:uppercase;
+    line-height:1.25;
+}
+.valor-card-freq{
+    display:block;
+    margin-top:3px;
+    font-family:"Inter",sans-serif;
+    font-size:10px;
+    font-weight:400;
+    color:var(--gray-400);
+    letter-spacing:0.2px;
+    text-transform:none;
+}
+.valor-card-preco{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:22px;
+    color:var(--blue);
+    letter-spacing:0.3px;
+    font-weight:400;
+    line-height:1;
+    white-space:nowrap;
+    flex-shrink:0;
+}
+.valor-card-preco small{
+    display:block;
+    margin-top:2px;
+    font-family:"Inter",sans-serif;
+    font-size:9px;
+    font-weight:400;
+    color:var(--gray-400);
+    letter-spacing:0;
+    text-align:right;
+    line-height:1.1;
+}
+
+/* SUBSEÇÃO ALUGUÉIS */
+.valores-subtitle{
+    text-align:center;
+    margin:56px 0 20px;
+    font-family:"Oswald",sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--blue);
+    position:relative;
+}
+.valores-subtitle::before,
+.valores-subtitle::after{
+    content:"";
+    display:inline-block;
+    width:32px;
+    height:1px;
+    background:var(--blue);
+    vertical-align:middle;
+    margin:0 12px;
+    opacity:.5;
+}
+.alugueis-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    max-width:720px;
+    margin:0 auto;
+}
+
+@media(max-width:900px){
+    .valores-grid{grid-template-columns:repeat(2,1fr);}
+    .alugueis-grid{grid-template-columns:1fr;}
+}
+@media(max-width:560px){
+    .valores-grid{grid-template-columns:1fr;gap:10px;}
+    .valor-card{padding:16px 18px}
+    .valor-card-nome{font-size:11px}
+    .valor-card-preco{font-size:20px}
+}
+
+/* legacy — ainda usado em alguns lugares */
 .valores-table {
     margin-top: 40px;
     background: var(--white);
@@ -920,6 +1334,7 @@ CTA MATRÍCULA
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 28px rgba(10, 30, 74, 0.05);
+    display:none;
 }
 
 .valores-row {
@@ -1242,6 +1657,14 @@ CTA MATRÍCULA
 
     transform:translateY(-3px);
 
+}
+
+.btn-nextfit-disabled{
+    background:rgba(255,255,255,.10) !important;
+    color:rgba(255,255,255,.55) !important;
+    cursor:not-allowed !important;
+    pointer-events:none;
+    border:1px dashed rgba(255,255,255,.20);
 }
 
 .btn-whatsapp{
@@ -1847,7 +2270,9 @@ img {
 
 .horarios-nota {
     padding: 34px 20px;
-    background: var(--gray-100);
+    background: #fff;
+    border-top: 1px solid rgba(10, 30, 74, .05);
+    border-bottom: 1px solid rgba(10, 30, 74, .05);
     text-align: center;
 }
 
@@ -1884,6 +2309,7 @@ img {
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 
 </head>
 
@@ -2130,133 +2556,126 @@ HTML: PROFESSORES
         </div>
 
 
-        <!-- TABELA DE VALORES -->
+        <!-- GRID DE VALORES -->
+        <div class="valores-grid">
 
-        <div class="valores-table rv">
-
-
-            <!-- CABEÇALHO -->
-
-            <div class="valores-row valores-header">
-
-                <div>
-                    Atividade
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Futebol</div>
+                    <span class="valor-card-freq">2× por semana</span>
                 </div>
+                <div class="valor-card-preco">R$ 120<small>por mês</small></div>
+            </article>
 
-                <div>
-                    Valor mensal
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Beach Tênis</div>
+                    <span class="valor-card-freq">1× por semana</span>
                 </div>
+                <div class="valor-card-preco">R$ 150<small>por mês</small></div>
+            </article>
 
-                <div>
-                    Frequência
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Beach Tênis Casal</div>
+                    <span class="valor-card-freq">1× por semana</span>
                 </div>
+                <div class="valor-card-preco">R$ 280<small>por mês</small></div>
+            </article>
 
-            </div>
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Vôlei de Praia</div>
+                    <span class="valor-card-freq">2× por semana</span>
+                </div>
+                <div class="valor-card-preco">R$ 120<small>por mês</small></div>
+            </article>
 
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Vôlei de Quadra</div>
+                    <span class="valor-card-freq">2× por semana</span>
+                </div>
+                <div class="valor-card-preco">R$ 120<small>por mês</small></div>
+            </article>
 
-            <!-- FUTEBOL -->
-            <div class="valores-row">
-                <div class="valores-atividade">FUTEBOL</div>
-                <div class="valores-preco">R$ 120,00</div>
-                <div class="valores-frequencia">2× semana</div>
-            </div>
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Combo Vôlei</div>
+                    <span class="valor-card-freq">Quadra + Praia</span>
+                </div>
+                <div class="valor-card-preco">R$ 200<small>por mês</small></div>
+            </article>
 
-            <!-- BEACH TÊNIS -->
-            <div class="valores-row">
-                <div class="valores-atividade">BEACH TÊNIS</div>
-                <div class="valores-preco">R$ 150,00</div>
-                <div class="valores-frequencia">1× semana</div>
-            </div>
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Funcional Adulto — Areia</div>
+                    <span class="valor-card-freq">2× por semana</span>
+                </div>
+                <div class="valor-card-preco">R$ 100<small>por mês</small></div>
+            </article>
 
-            <!-- BEACH TÊNIS CASAL -->
-            <div class="valores-row">
-                <div class="valores-atividade">BEACH TÊNIS CASAL</div>
-                <div class="valores-preco">R$ 280,00</div>
-                <div class="valores-frequencia">1× semana</div>
-            </div>
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Funcional Campo — Adulto</div>
+                    <span class="valor-card-freq">1× por semana</span>
+                </div>
+                <div class="valor-card-preco">R$ 120<small>por mês</small></div>
+            </article>
 
-            <!-- VÔLEI DE PRAIA -->
-            <div class="valores-row">
-                <div class="valores-atividade">VÔLEI DE PRAIA</div>
-                <div class="valores-preco">R$ 120,00</div>
-                <div class="valores-frequencia">2× semana</div>
-            </div>
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Funcional Kids — Areia</div>
+                    <span class="valor-card-freq">2× por semana</span>
+                </div>
+                <div class="valor-card-preco">R$ 80<small>por mês</small></div>
+            </article>
 
-            <!-- VÔLEI DE QUADRA -->
-            <div class="valores-row">
-                <div class="valores-atividade">VÔLEI DE QUADRA</div>
-                <div class="valores-preco">R$ 120,00</div>
-                <div class="valores-frequencia">2× semana</div>
-            </div>
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Treino de Goleiro — Campo</div>
+                    <span class="valor-card-freq">2× por semana</span>
+                </div>
+                <div class="valor-card-preco">R$ 100<small>por mês</small></div>
+            </article>
 
-            <!-- COMBO VÔLEI -->
-            <div class="valores-row">
-                <div class="valores-atividade">COMBO VÔLEI <small style="display:block;font-size:10px;font-weight:400;color:var(--gray-400);letter-spacing:1px;margin-top:2px">QUADRA + PRAIA</small></div>
-                <div class="valores-preco">R$ 200,00</div>
-                <div class="valores-frequencia">2 modalidades</div>
-            </div>
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Day Use — Areia</div>
+                    <span class="valor-card-freq">Até 4 pessoas</span>
+                </div>
+                <div class="valor-card-preco">R$ 60<small>por período</small></div>
+            </article>
 
-            <!-- FUNCIONAL ADULTO AREIA -->
-            <div class="valores-row">
-                <div class="valores-atividade">FUNCIONAL ADULTO — AREIA</div>
-                <div class="valores-preco">R$ 100,00</div>
-                <div class="valores-frequencia">2× semana</div>
-            </div>
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Day Use — Areia</div>
+                    <span class="valor-card-freq">Acima de 5 pessoas</span>
+                </div>
+                <div class="valor-card-preco">R$ 20<small>por pessoa</small></div>
+            </article>
 
-            <!-- FUNCIONAL CAMPO ADULTO -->
-            <div class="valores-row">
-                <div class="valores-atividade">FUNCIONAL CAMPO — ADULTO</div>
-                <div class="valores-preco">R$ 120,00</div>
-                <div class="valores-frequencia">1× semana</div>
-            </div>
+        </div>
 
-            <!-- FUNCIONAL KIDS AREIA -->
-            <div class="valores-row">
-                <div class="valores-atividade">FUNCIONAL KIDS — AREIA</div>
-                <div class="valores-preco">R$ 80,00</div>
-                <div class="valores-frequencia">2× semana</div>
-            </div>
+        <!-- SUBSEÇÃO ALUGUÉIS -->
+        <div class="valores-subtitle rv">Aluguéis</div>
 
-            <!-- GOLEIRO CAMPO -->
-            <div class="valores-row">
-                <div class="valores-atividade">TREINAMENTO PARA GOLEIRO — CAMPO</div>
-                <div class="valores-preco">R$ 100,00</div>
-                <div class="valores-frequencia">2× semana</div>
-            </div>
+        <div class="alugueis-grid">
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Aluguel do Campo de Futebol</div>
+                    <span class="valor-card-freq">Verificar disponibilidade</span>
+                </div>
+                <div class="valor-card-preco" style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase">Consultar</div>
+            </article>
 
-            <!-- DAY USE ATÉ 4 -->
-            <div class="valores-row">
-                <div class="valores-atividade">DAY USE — AREIA <small style="display:block;font-size:10px;font-weight:400;color:var(--gray-400);letter-spacing:1px;margin-top:2px">ATÉ 4 PESSOAS</small></div>
-                <div class="valores-preco">R$ 60,00</div>
-                <div class="valores-frequencia">por período</div>
-            </div>
-
-            <!-- DAY USE 5+ -->
-            <div class="valores-row">
-                <div class="valores-atividade">DAY USE — AREIA <small style="display:block;font-size:10px;font-weight:400;color:var(--gray-400);letter-spacing:1px;margin-top:2px">ACIMA DE 5 PESSOAS</small></div>
-                <div class="valores-preco">R$ 20,00</div>
-                <div class="valores-frequencia">por pessoa</div>
-            </div>
-
-            <!-- SUBHEADER ALUGUÉIS -->
-            <div class="valores-subheader">
-                <div>Aluguéis</div>
-            </div>
-
-            <!-- ALUGUEL CAMPO FUTEBOL -->
-            <div class="valores-row">
-                <div class="valores-atividade">ALUGUEL DO CAMPO DE FUTEBOL</div>
-                <div class="valores-preco" style="font-size:18px;font-family:'Oswald',sans-serif;font-weight:500">Consultar</div>
-                <div class="valores-frequencia">Verificar disponibilidade</div>
-            </div>
-
-            <!-- ALUGUEL QUADRA AREIA -->
-            <div class="valores-row">
-                <div class="valores-atividade">ALUGUEL DE QUADRA DE AREIA</div>
-                <div class="valores-preco">R$ 100,00</div>
-                <div class="valores-frequencia">1 hora</div>
-            </div>
-
+            <article class="valor-card rv">
+                <div class="valor-card-info">
+                    <div class="valor-card-nome">Aluguel de Quadra de Areia</div>
+                    <span class="valor-card-freq">1 hora</span>
+                </div>
+                <div class="valor-card-preco">R$ 100<small>por hora</small></div>
+            </article>
         </div>
 
 
@@ -2321,6 +2740,11 @@ HTML: PROFESSORES
                 <p>
                     Obrigatório para treinamentos e competições.
                 </p>
+
+                <button type="button" class="btn-comprar-uniforme" onclick="openUniformeModal()">
+                    Comprar Uniforme
+                    <i class="bi bi-arrow-right"></i>
+                </button>
 
             </article>
 
@@ -2425,9 +2849,9 @@ HTML: PROFESSORES
 
             </div>
 
-            <a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/" target="_blank" class="btn-nextfit">
-                MATRÍCULAS EM BREVE 
-            </a>
+            <span class="btn-nextfit btn-nextfit-disabled" aria-disabled="true">
+                MATRÍCULAS EM BREVE
+            </span>
 
         </div>
 
@@ -2505,20 +2929,24 @@ HTML: PROFESSORES
 <h2 class="sec-title rv">Entre em contato</h2>
     </div>
     <div class="contato-grid">
-      <div class="contato-card rv">
+      <a href="https://wa.me/5516996167588" target="_blank" rel="noopener" class="contato-card rv">
         <div class="c-icon">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.846L0 24l6.335-1.535A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.64-.492-5.165-1.355l-.372-.208-3.758.911.929-3.664-.23-.382A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         </div>
-        <div class="c-label">WhatsApp</div>
-        <div class="c-val"><a href="https://wa.me/5516996167588" target="_blank" rel="noopener">+55 16 99616-7588</a></div>
-      </div>
-      <div class="contato-card rv d1">
+        <div class="contato-card-text">
+          <div class="c-label">WhatsApp</div>
+          <div class="c-val">+55 16 99616-7588</div>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/independente__oficial/" target="_blank" rel="noopener" class="contato-card rv d1">
         <div class="c-icon">
           <i class="bi bi-instagram"></i>
         </div>
-        <div class="c-label">Instagram</div>
-        <div class="c-val"><a href="https://www.instagram.com/independente__oficial/" target="_blank" rel="noopener">@independente__oficial</a></div>
-      </div>
+        <div class="contato-card-text">
+          <div class="c-label">Instagram</div>
+          <div class="c-val">@independente__oficial</div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -2540,6 +2968,110 @@ HTML: PROFESSORES
   </div>
 </section>
 
+
+<!-- =====================================================
+     MODAL COMPRA DE UNIFORME
+     ===================================================== -->
+<div class="uniforme-modal-overlay" id="uniformeModal" onclick="if(event.target===this)closeUniformeModal()">
+  <div class="uniforme-modal">
+    <div class="uniforme-modal-header">
+      <div>
+        <small>Pedido de uniforme</small>
+        <h3>Uniforme Oficial Independente</h3>
+      </div>
+      <button type="button" class="uniforme-modal-close" onclick="closeUniformeModal()" aria-label="Fechar">
+        <i class="bi bi-x"></i>
+      </button>
+    </div>
+    <div class="uniforme-modal-body">
+      <form id="uniformeForm" onsubmit="return gerarPedidoUniforme(event)">
+
+        <div class="uniforme-form-group">
+          <label for="uf-nome">Nome completo</label>
+          <input type="text" id="uf-nome" name="nome" required placeholder="Seu nome">
+        </div>
+
+        <div class="uniforme-form-row">
+          <div class="uniforme-form-group">
+            <label for="uf-telefone">WhatsApp</label>
+            <input type="tel" id="uf-telefone" name="telefone" required placeholder="(16) 99999-9999">
+          </div>
+          <div class="uniforme-form-group">
+            <label for="uf-modalidade">Modalidade</label>
+            <select id="uf-modalidade" name="modalidade" required>
+              <option value="">Selecione</option>
+              <option>Futebol</option>
+              <option>Vôlei Masculino</option>
+              <option>Vôlei Feminino</option>
+              <option>Vôlei de Praia</option>
+              <option>Beach Tênis</option>
+              <option>Funcional</option>
+              <option>Outra</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="uniforme-form-row">
+          <div class="uniforme-form-group">
+            <label for="uf-tamanho">Tamanho da camiseta</label>
+            <select id="uf-tamanho" name="tamanho" required>
+              <option value="">Selecione</option>
+              <option>PP</option>
+              <option>P</option>
+              <option>M</option>
+              <option>G</option>
+              <option>GG</option>
+              <option>XG</option>
+              <option>Infantil 6</option>
+              <option>Infantil 8</option>
+              <option>Infantil 10</option>
+              <option>Infantil 12</option>
+              <option>Infantil 14</option>
+            </select>
+          </div>
+          <div class="uniforme-form-group">
+            <label for="uf-quantidade">Quantidade</label>
+            <input type="number" id="uf-quantidade" name="quantidade" min="1" max="10" value="1" required onchange="atualizarTotalUniforme()">
+          </div>
+        </div>
+
+        <div class="uniforme-form-group">
+          <label>Forma de pagamento</label>
+          <div class="uniforme-pagamento-opts">
+            <label class="uniforme-pagamento-opt">
+              <input type="radio" name="pagamento" value="PIX" checked>
+              <div class="uniforme-pagamento-opt-title">PIX</div>
+              <div class="uniforme-pagamento-opt-sub">Pague pelo app do banco</div>
+            </label>
+            <label class="uniforme-pagamento-opt">
+              <input type="radio" name="pagamento" value="Presencial">
+              <div class="uniforme-pagamento-opt-title">Presencial</div>
+              <div class="uniforme-pagamento-opt-sub">Diretamente no complexo</div>
+            </label>
+          </div>
+        </div>
+
+        <div class="uniforme-total-box">
+          <div>
+            <small>Valor total</small>
+            <strong>Uniforme oficial</strong>
+          </div>
+          <div class="uniforme-total-value" id="uf-total">R$ 150,00</div>
+        </div>
+
+        <button type="submit" class="btn-gerar-pdf">
+          <i class="bi bi-file-earmark-pdf"></i>
+          Gerar Pedido e Enviar pelo WhatsApp
+        </button>
+
+        <p class="uniforme-info-nota">
+          Ao clicar, será gerado um <strong>PDF personalizado</strong> com os dados do pedido e instruções de pagamento. Envie o PDF junto com o comprovante pelo WhatsApp para finalizar.
+        </p>
+
+      </form>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="footer-grid">
@@ -2585,6 +3117,10 @@ HTML: PROFESSORES
       </ul>
     </div>
   </div>
+  <div class="f-legal">
+    <span><strong>Complexo Esportivo Independente Ltda</strong> · CNPJ 68.509.839/0001-93</span>
+    <span>Rua Emerson Castro Munhoz, 539 — Vila Alirdes 2 · Nova Europa/SP · CEP 14520-000</span>
+  </div>
   <div class="f-bottom">
     <span>© 2026 Esporte Clube Independente. Todos os direitos reservados.</span>
     <span>Paixão · Disciplina · Superação</span>
@@ -2594,6 +3130,256 @@ HTML: PROFESSORES
 <script>
 function toggleMenu(){document.getElementById("mobileNav").classList.toggle("open")}
 function closeMenu(){document.getElementById("mobileNav").classList.remove("open")}
+
+// ============ MODAL UNIFORME ============
+const UNIFORME_PRECO = 150;
+const WHATSAPP_NUM = "5516996167588";
+const PIX_CHAVE = "68.509.839/0001-93";
+const PIX_NOME = "Complexo Esportivo Independente Ltda";
+
+function openUniformeModal(){
+  document.getElementById("uniformeModal").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeUniformeModal(){
+  document.getElementById("uniformeModal").classList.remove("open");
+  document.body.style.overflow="";
+}
+function atualizarTotalUniforme(){
+  const qtd = parseInt(document.getElementById("uf-quantidade").value)||1;
+  const total = UNIFORME_PRECO * qtd;
+  document.getElementById("uf-total").textContent = "R$ " + total.toFixed(2).replace(".",",");
+}
+
+function gerarPedidoUniforme(e){
+  e.preventDefault();
+  const nome = document.getElementById("uf-nome").value.trim();
+  const telefone = document.getElementById("uf-telefone").value.trim();
+  const modalidade = document.getElementById("uf-modalidade").value;
+  const tamanho = document.getElementById("uf-tamanho").value;
+  const quantidade = parseInt(document.getElementById("uf-quantidade").value)||1;
+  const pagamento = document.querySelector("input[name='pagamento']:checked").value;
+  const total = UNIFORME_PRECO * quantidade;
+  const totalStr = "R$ " + total.toFixed(2).replace(".",",");
+  const pedidoId = "IND-" + Date.now().toString().slice(-6);
+  const dataStr = new Date().toLocaleDateString("pt-BR");
+
+  // GERA PDF
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({unit:"pt",format:"a4"});
+  const W = doc.internal.pageSize.getWidth();
+  const NAVY = [10,30,74];
+  const BLUE = [30,91,255];
+  const GRAY = [90,100,128];
+  const LIGHT = [244,246,250];
+
+  // HEADER
+  doc.setFillColor(...NAVY);
+  doc.rect(0,0,W,120,"F");
+  doc.setFillColor(...BLUE);
+  doc.rect(0,120,W,4,"F");
+
+  doc.setTextColor(255,255,255);
+  doc.setFont("helvetica","bold");
+  doc.setFontSize(11);
+  doc.text("ESPORTE CLUBE INDEPENDENTE", 40, 45);
+  doc.setFont("helvetica","normal");
+  doc.setFontSize(9);
+  doc.setTextColor(180,200,255);
+  doc.text("Pedido de Uniforme Oficial", 40, 62);
+
+  doc.setFontSize(9);
+  doc.setTextColor(255,255,255);
+  doc.text("Pedido nº "+pedidoId, W-40, 45, {align:"right"});
+  doc.setTextColor(180,200,255);
+  doc.text("Emitido em "+dataStr, W-40, 62, {align:"right"});
+
+  doc.setFontSize(20);
+  doc.setFont("helvetica","bold");
+  doc.setTextColor(255,255,255);
+  doc.text("UNIFORME OFICIAL", 40, 100);
+
+  // CORPO
+  let y = 160;
+
+  doc.setTextColor(...NAVY);
+  doc.setFont("helvetica","bold");
+  doc.setFontSize(9);
+  doc.text("DADOS DO CLIENTE", 40, y);
+  doc.setDrawColor(...BLUE);
+  doc.setLineWidth(1);
+  doc.line(40, y+4, 160, y+4);
+  y += 22;
+
+  const linha = (label, valor)=>{
+    doc.setFont("helvetica","normal");
+    doc.setFontSize(9);
+    doc.setTextColor(...GRAY);
+    doc.text(label, 40, y);
+    doc.setFont("helvetica","bold");
+    doc.setFontSize(11);
+    doc.setTextColor(...NAVY);
+    doc.text(valor, 40, y+14);
+    y += 34;
+  };
+
+  linha("NOME", nome);
+  linha("WHATSAPP", telefone);
+  linha("MODALIDADE", modalidade);
+
+  // 2 COLUNAS
+  doc.setFont("helvetica","normal");
+  doc.setFontSize(9);
+  doc.setTextColor(...GRAY);
+  doc.text("TAMANHO", 40, y);
+  doc.text("QUANTIDADE", 200, y);
+  doc.setFont("helvetica","bold");
+  doc.setFontSize(11);
+  doc.setTextColor(...NAVY);
+  doc.text(tamanho, 40, y+14);
+  doc.text(String(quantidade), 200, y+14);
+  y += 42;
+
+  // TOTAL BOX
+  doc.setFillColor(...LIGHT);
+  doc.roundedRect(40, y, W-80, 60, 6, 6, "F");
+  doc.setFont("helvetica","normal");
+  doc.setFontSize(9);
+  doc.setTextColor(...GRAY);
+  doc.text("VALOR TOTAL", 56, y+22);
+  doc.setFont("helvetica","normal");
+  doc.setFontSize(8);
+  doc.text("Uniforme oficial ("+quantidade+"x R$ 150,00)", 56, y+38);
+  doc.setFont("helvetica","bold");
+  doc.setFontSize(22);
+  doc.setTextColor(...BLUE);
+  doc.text(totalStr, W-56, y+38, {align:"right"});
+  y += 84;
+
+  // PAGAMENTO
+  doc.setFont("helvetica","bold");
+  doc.setFontSize(9);
+  doc.setTextColor(...NAVY);
+  doc.text("FORMA DE PAGAMENTO", 40, y);
+  doc.setDrawColor(...BLUE);
+  doc.line(40, y+4, 178, y+4);
+  y += 22;
+
+  if(pagamento === "PIX"){
+    doc.setFillColor(255,255,255);
+    doc.setDrawColor(30,91,255,80);
+    doc.setLineWidth(1);
+    doc.roundedRect(40, y, W-80, 130, 6, 6, "S");
+
+    doc.setFont("helvetica","bold");
+    doc.setFontSize(11);
+    doc.setTextColor(...BLUE);
+    doc.text("Pague via PIX", 56, y+22);
+
+    doc.setFont("helvetica","normal");
+    doc.setFontSize(9);
+    doc.setTextColor(...GRAY);
+    doc.text("CHAVE PIX (CNPJ)", 56, y+42);
+    doc.setFont("helvetica","bold");
+    doc.setFontSize(12);
+    doc.setTextColor(...NAVY);
+    doc.text(PIX_CHAVE, 56, y+56);
+
+    doc.setFont("helvetica","normal");
+    doc.setFontSize(9);
+    doc.setTextColor(...GRAY);
+    doc.text("BENEFICIÁRIO", 56, y+80);
+    doc.setFont("helvetica","bold");
+    doc.setFontSize(10);
+    doc.setTextColor(...NAVY);
+    doc.text(PIX_NOME, 56, y+94);
+
+    doc.setFont("helvetica","italic");
+    doc.setFontSize(8.5);
+    doc.setTextColor(...GRAY);
+    doc.text("Após o pagamento, envie o comprovante pelo WhatsApp junto com este PDF.", 56, y+118);
+
+    y += 150;
+  } else {
+    doc.setFillColor(255,255,255);
+    doc.setDrawColor(30,91,255,80);
+    doc.setLineWidth(1);
+    doc.roundedRect(40, y, W-80, 90, 6, 6, "S");
+
+    doc.setFont("helvetica","bold");
+    doc.setFontSize(11);
+    doc.setTextColor(...BLUE);
+    doc.text("Pagamento Presencial", 56, y+22);
+
+    doc.setFont("helvetica","normal");
+    doc.setFontSize(10);
+    doc.setTextColor(...NAVY);
+    doc.text("Você poderá pagar diretamente no Complexo Esportivo Independente.", 56, y+42);
+
+    doc.setFont("helvetica","normal");
+    doc.setFontSize(9);
+    doc.setTextColor(...GRAY);
+    doc.text("Endereço: Rua Emerson Castro Munhoz, 539 — Vila Alirdes 2", 56, y+60);
+    doc.text("Nova Europa/SP · CEP 14520-000", 56, y+74);
+
+    y += 110;
+  }
+
+  // CTA
+  y += 6;
+  doc.setFillColor(...NAVY);
+  doc.roundedRect(40, y, W-80, 54, 6, 6, "F");
+  doc.setFont("helvetica","bold");
+  doc.setFontSize(11);
+  doc.setTextColor(255,255,255);
+  doc.text("PRÓXIMO PASSO", 56, y+22);
+  doc.setFont("helvetica","normal");
+  doc.setFontSize(9);
+  doc.setTextColor(180,200,255);
+  doc.text("Envie este PDF pelo WhatsApp: (16) 99616-7588", 56, y+40);
+  y += 72;
+
+  // FOOTER
+  doc.setDrawColor(220,224,232);
+  doc.line(40, 780, W-40, 780);
+  doc.setFont("helvetica","normal");
+  doc.setFontSize(8);
+  doc.setTextColor(...GRAY);
+  doc.text("Complexo Esportivo Independente Ltda · CNPJ 68.509.839/0001-93", W/2, 795, {align:"center"});
+  doc.text("Rua Emerson Castro Munhoz, 539 — Vila Alirdes 2 · Nova Europa/SP · CEP 14520-000", W/2, 807, {align:"center"});
+  doc.setTextColor(...BLUE);
+  doc.setFont("helvetica","bold");
+  doc.text("ecindependente.com  ·  @independente__oficial", W/2, 822, {align:"center"});
+
+  // SALVA PDF
+  const filename = "Pedido-Uniforme-Independente-"+pedidoId+".pdf";
+  doc.save(filename);
+
+  // MENSAGEM WHATSAPP
+  const msg =
+    "Olá! Fiz meu pedido de uniforme pelo site.%0A%0A"+
+    "*Pedido:* "+pedidoId+"%0A"+
+    "*Nome:* "+encodeURIComponent(nome)+"%0A"+
+    "*Modalidade:* "+encodeURIComponent(modalidade)+"%0A"+
+    "*Tamanho:* "+encodeURIComponent(tamanho)+"%0A"+
+    "*Quantidade:* "+quantidade+"%0A"+
+    "*Total:* "+encodeURIComponent(totalStr)+"%0A"+
+    "*Pagamento:* "+pagamento+"%0A%0A"+
+    "Vou enviar o PDF e o comprovante em seguida. Obrigado!";
+
+  setTimeout(()=>{
+    window.open("https://wa.me/"+WHATSAPP_NUM+"?text="+msg, "_blank");
+    closeUniformeModal();
+    document.getElementById("uniformeForm").reset();
+    atualizarTotalUniforme();
+  }, 600);
+
+  return false;
+}
+// FECHA MODAL COM ESC
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape") closeUniformeModal();
+});
 document.addEventListener("click",function(e){
   const m=document.getElementById("mobileNav");
   const h=document.querySelector(".hamburger");
