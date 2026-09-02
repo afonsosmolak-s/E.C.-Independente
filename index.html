@@ -25,7 +25,7 @@
 <meta name="twitter:description" content="Formando atletas e construindo pessoas através do esporte, disciplina e trabalho em equipe.">
 <meta name="twitter:image" content="https://ecindependente.com/image/wpp2.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -40,7 +40,8 @@
   --gray-600:#5a6480;
 }
 html{scroll-behavior:smooth}
-body{font-family:"Manrope",sans-serif;color:var(--white);background:var(--white);overflow-x:hidden}
+body{font-family:"Plus Jakarta Sans",sans-serif;color:var(--white);background:var(--white);overflow-x:hidden;font-weight:500;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-feature-settings:"ss01","cv11"}
+p{font-weight:500;letter-spacing:-0.005em}
 
 header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,15,40,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(30,91,255,0.12)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:62px}
@@ -79,7 +80,7 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .hero-eyebrow::before,.hero-eyebrow::after{content:"";width:28px;height:1px;background:var(--blue);display:block}
 .hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(42px,6.8vw,76px);line-height:0.96;color:var(--white);letter-spacing:0.5px;margin-bottom:22px;font-weight:400}
 .hero h1 .acc{color:var(--white)}
-.hero p{font-size:clamp(14px,1.4vw,16px);color:rgba(255,255,255,0.72);line-height:1.7;max-width:520px;margin:0 auto 36px;font-weight:400}
+.hero p{font-size:clamp(15px,1.5vw,17px);color:rgba(255,255,255,0.82);line-height:1.65;max-width:540px;margin:0 auto 24px;font-weight:500;letter-spacing:-0.005em}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-outline{border:1px solid rgba(255,255,255,0.32);color:var(--white);font-family:"Oswald",sans-serif;font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;padding:8px 16px;border-radius:4px;text-decoration:none;transition:border-color 0.2s,background 0.2s}
 .btn-outline:hover{border-color:rgba(255,255,255,0.65);background:rgba(255,255,255,0.06)}
@@ -95,7 +96,7 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
     background:rgba(30,91,255,.15);
     border:1px solid rgba(30,91,255,.45);
     border-radius:100px;
-    font-family:"Manrope",sans-serif;
+    font-family:"Plus Jakarta Sans",sans-serif;
     font-size:12px;
     font-weight:500;
     color:#fff;
@@ -281,7 +282,7 @@ border-right:1px solid rgba(10,30,74,0.08);
     font-weight:400;
 }
 .stat-num.inf{
-    font-family:"Manrope",sans-serif;
+    font-family:"Plus Jakarta Sans",sans-serif;
     font-weight:600;
     font-size:36px;
 }
@@ -308,7 +309,7 @@ section{padding:76px 80px}
 .sec-eyebrow{font-family:"Oswald",sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
 .sec-title{font-family:"Bebas Neue",sans-serif;font-size:clamp(30px,3.6vw,44px);line-height:1.05;color:var(--navy);margin-bottom:14px;letter-spacing:0.5px;font-weight:400}
 .sec-title.w{color:var(--navy-deep)}
-.sec-sub{font-size:15px;color:var(--gray-600);line-height:1.7;max-width:460px;font-weight:400}
+.sec-sub{font-size:15.5px;color:var(--gray-600);line-height:1.65;max-width:460px;font-weight:500;letter-spacing:-0.005em}
 .sec-sub.w{color:rgba(255,255,255,0.6)}
 
 .about{
@@ -324,7 +325,7 @@ section{padding:76px 80px}
 .pillar{background:#fafbfd;border-left:2px solid var(--blue);padding:14px 16px;border-radius:0 4px 4px 0;transition:.25s}
 .pillar:hover{background:#f4f6fa;transform:translateX(2px)}
 .pillar h4{font-family:"Oswald",sans-serif;font-size:12px;font-weight:600;color:var(--navy);letter-spacing:0.4px;text-transform:uppercase;margin-bottom:4px}
-.pillar p{font-size:11.5px;color:var(--gray-600);line-height:1.55}
+.pillar p{font-size:12px;color:var(--gray-600);line-height:1.55;font-weight:500}
 
 .modalidades{
     background:#fff;
@@ -398,10 +399,21 @@ CSS PROFESSORES
 .prof-card h4{
     margin-top:12px;
     font-family:"Oswald",sans-serif;
-    font-size:14px;
+    font-size:15px;
     color:var(--navy);
-    font-weight:500;
+    font-weight:600;
     letter-spacing:0.5px;
+    text-transform:uppercase;
+    line-height:1.15;
+}
+.prof-role{
+    display:block;
+    margin-top:3px;
+    font-family:"Plus Jakarta Sans",sans-serif;
+    font-size:11px;
+    color:var(--gray-400);
+    font-weight:500;
+    letter-spacing:0.2px;
 }
 @media(max-width:1100px){
     .prof-grid{
@@ -435,7 +447,7 @@ CSS PROFESSORES
 .img-box{border-radius:6px;overflow:hidden;aspect-ratio:16/9}
 .img-box img{width:100%;height:100%;object-fit:cover;display:block}
 .estru-info{grid-column:1/-1;background:var(--navy);border-radius:6px;padding:32px 38px;display:flex;align-items:center;gap:32px}
-.estru-info p{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7;font-weight:400;flex:1;text-align:left !important}
+.estru-info p{font-size:14.5px;color:rgba(255,255,255,0.80);line-height:1.65;font-weight:500;flex:1;text-align:left !important;letter-spacing:-0.005em}
 .estru-info .btn-cta{flex-shrink:0}
 
 
@@ -574,11 +586,11 @@ CSS PROFESSORES
 .lider-logos{margin:0 auto 40px;max-width:1100px;display:flex;justify-content:center;border:1px solid rgba(30,91,255,.35);border-radius:6px;overflow:hidden;box-sizing:border-box}
 .lider-logos img{max-width:100%;height:auto;display:block}
 .lider-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:780px;margin:0 auto 40px}
-.lider-stat{background:#fafbfd;border-left:2px solid var(--blue);border-radius:0 4px 4px 0;padding:20px 16px;text-align:center}
+.lider-stat{background:#fff;border:1px solid rgba(10,30,74,.06);border-left:2px solid var(--blue);border-radius:0 4px 4px 0;padding:20px 16px;text-align:center}
 .lider-stat .stat-num{font-size:28px}
 .lider-stat .stat-label{margin-top:4px;color:var(--gray-600);font-size:9px;letter-spacing:1.4px}
 .lider-bio{max-width:680px;margin:0 auto 36px}
-.lider-bio p{font-size:14px;color:var(--gray-600);line-height:1.8;font-weight:400;margin-bottom:14px}
+.lider-bio p{font-size:14.5px;color:var(--gray-600);line-height:1.7;font-weight:500;margin-bottom:14px;letter-spacing:-0.005em}
 .lider-bio p:last-child{margin-bottom:0}
 .lider-quote{max-width:720px;margin:0 auto;background:var(--navy);border-radius:6px;padding:36px 34px;text-align:center}
 .lider-quote p{font-family:"Bebas Neue",sans-serif;font-size:clamp(18px,2.2vw,24px);color:var(--white);line-height:1.35;letter-spacing:0.3px;margin-bottom:14px;font-weight:400}
@@ -588,7 +600,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
 .f-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .f-logo img{height:42px;mix-blend-mode:screen}
-.f-desc{font-size:12px;color:var(--gray-400);line-height:1.65;max-width:250px;font-weight:400}
+.f-desc{font-size:12.5px;color:var(--gray-400);line-height:1.6;max-width:260px;font-weight:500;letter-spacing:-0.005em}
 .f-socials{display:flex;gap:8px;margin-top:14px}
 .f-soc{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.45);text-decoration:none;transition:border-color 0.2s,color 0.2s,background 0.2s}
 .f-soc:hover{border-color:var(--blue);color:var(--white);background:rgba(30,91,255,0.12)}
@@ -613,12 +625,13 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
     margin-top:32px;
     text-align:center;
     color:var(--gray-600);
-    font-size:13px;
-    line-height:1.7;
+    font-size:14px;
+    line-height:1.65;
     max-width:680px;
     margin-left:auto;
     margin-right:auto;
-    font-weight:400;
+    font-weight:500;
+    letter-spacing:-0.005em;
 }
 /* ===== PROFESSORES ===== */
 .uniformes{
@@ -689,7 +702,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 .uniforme-img{
     border-radius:10px;
     overflow:hidden;
-    background:#f4f6fa;
+    background:transparent;
     aspect-ratio:3/4;
     padding:0;
 }
@@ -698,10 +711,10 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
     display:block;
     width:100%;
     height:100%;
-    object-fit:contain;
-    object-position:center center;
+    object-fit:cover;
+    object-position:center top;
     transition:transform .35s;
-    background:#f4f6fa;
+    background:transparent;
 }
 .uniforme-card:hover .uniforme-img img{
     transform:scale(1.03);
@@ -772,7 +785,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
 .uniforme-info small{
     margin-top:2px;
-    font-family:"Manrope",sans-serif;
+    font-family:"Plus Jakarta Sans",sans-serif;
     font-size:10px;
     letter-spacing:0.5px;
     text-transform:none;
@@ -874,7 +887,13 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
     box-shadow:0 10px 28px rgba(10,30,74,.08);
 
+    display:flex;
+    flex-direction:column;
+
 }
+.investimento-card > p{flex:1}
+.investimento-card .btn-comprar-uniforme,
+.investimento-card .btn-fazer-matricula{margin-top:auto}
 
 .investimento-card:hover{
 
@@ -934,13 +953,15 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
 .investimento-card p{
 
-    color:rgba(255,255,255,.70);
+    color:rgba(255,255,255,.75);
 
-    line-height:1.65;
+    line-height:1.6;
 
-    font-size:13px;
+    font-size:13.5px;
 
-    font-weight:400;
+    font-weight:500;
+
+    letter-spacing:-0.005em;
 
 }
 
@@ -999,10 +1020,11 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
     color:#6d7890;
 
-    line-height:1.65;
+    line-height:1.6;
 
-    font-size:13px;
-    font-weight:400;
+    font-size:13.5px;
+    font-weight:500;
+    letter-spacing:-0.005em;
 
 }
 /*==================================================
@@ -1141,7 +1163,7 @@ MODAL COMPRA DE UNIFORME
     padding:10px 12px;
     border:1px solid rgba(10,30,74,.15);
     border-radius:6px;
-    font-family:"Manrope",sans-serif;
+    font-family:"Plus Jakarta Sans",sans-serif;
     font-size:13px;
     color:var(--navy);
     background:#fff;
@@ -1339,7 +1361,7 @@ MODAL COMPRA DE UNIFORME
     background:transparent;
     border:none;
     color:var(--gray-400);
-    font-family:"Manrope",sans-serif;
+    font-family:"Plus Jakarta Sans",sans-serif;
     font-size:12px;
     letter-spacing:0.3px;
     cursor:pointer;
@@ -1452,14 +1474,14 @@ COMBO FAMÍLIA
     gap:16px;
 }
 .combo-obs-item{
-    background:var(--white);
+    background:#fafbfd;
     border-left:2px solid var(--blue);
     border-radius:0 4px 4px 0;
     padding:16px 18px;
-    font-size:12px;
+    font-size:12.5px;
     color:var(--gray-600);
-    line-height:1.6;
-    font-weight:400;
+    line-height:1.55;
+    font-weight:500;
 }
 .combo-obs-item strong{
     display:block;
@@ -1567,7 +1589,7 @@ CTA MATRÍCULA
 .valor-card-freq{
     display:block;
     margin-top:3px;
-    font-family:"Manrope",sans-serif;
+    font-family:"Plus Jakarta Sans",sans-serif;
     font-size:10px;
     font-weight:400;
     color:var(--gray-400);
@@ -1587,7 +1609,7 @@ CTA MATRÍCULA
 .valor-card-preco small{
     display:block;
     margin-top:2px;
-    font-family:"Manrope",sans-serif;
+    font-family:"Plus Jakarta Sans",sans-serif;
     font-size:9px;
     font-weight:400;
     color:var(--gray-400);
@@ -1911,12 +1933,13 @@ CTA MATRÍCULA
 
 .cta-content p{
 
-    color:rgba(255,255,255,.75);
+    color:rgba(255,255,255,.80);
 
-    font-size:13px;
+    font-size:13.5px;
 
-    line-height:1.65;
-    font-weight:400;
+    line-height:1.6;
+    font-weight:500;
+    letter-spacing:-0.005em;
 
 }
 
@@ -2846,28 +2869,33 @@ HTML: PROFESSORES
         <div class="prof-grid">
 
             <div class="prof-card">
-                <img src="image/prof1.jpg" alt="Professor 1">
-                <h4>EM BREVE</h4>
+                <img src="image/prof1.jpg" alt="Léo Castro">
+                <h4>Léo Castro</h4>
+                <span class="prof-role">Presidente &amp; Fundador</span>
             </div>
 
             <div class="prof-card">
-                <img src="image/prof2.jpg" alt="Professor 2">
-                <h4>EM BREVE</h4>
+                <img src="image/prof2.jpg" alt="Jorginho">
+                <h4>Jorginho</h4>
+                <span class="prof-role">Professor</span>
             </div>
 
             <div class="prof-card">
-                <img src="image/prof3.jpg" alt="Professor 3">
-                <h4>EM BREVE</h4>
+                <img src="image/prof3.jpg" alt="Cleslei Lucas">
+                <h4>Cleslei Lucas</h4>
+                <span class="prof-role">Professor</span>
             </div>
 
             <div class="prof-card">
-                <img src="image/prof4.jpg" alt="Professor 4">
-                <h4>EM BREVE</h4>
+                <img src="image/prof4.jpg" alt="Caio">
+                <h4>Caio</h4>
+                <span class="prof-role">Professor</span>
             </div>
 
             <div class="prof-card">
-                <img src="image/prof5.jpg" alt="Professor 5">
-                <h4>EM BREVE</h4>
+                <img src="image/prof5.jpg" alt="Em breve">
+                <h4>Em breve</h4>
+                <span class="prof-role">Novo professor</span>
             </div>
 
         </div>
@@ -3066,7 +3094,7 @@ HTML: PROFESSORES
                 </div>
 
                 <p>
-                    Taxa única. Você faz uma vez e tá dentro pra valer.
+                    Taxa única de inscrição. Você preenche seu cadastro no sistema Next Fit em poucos minutos, garante sua vaga e já pode começar os treinos com a gente.
                 </p>
 
                 <a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/" target="_blank" rel="noopener" class="btn-comprar-uniforme btn-fazer-matricula">
@@ -3090,7 +3118,7 @@ HTML: PROFESSORES
                 </div>
 
                 <p>
-                    Camisa, short e meião do clube. Obrigatório em treinos e jogos.
+                    Camisa, short e meião oficiais do clube. Obrigatório em treinos e jogos — e você ainda leva pra casa o orgulho de vestir as cores do Independente.
                 </p>
 
                 <button type="button" class="btn-comprar-uniforme" onclick="openUniformeModal()">
