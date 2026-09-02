@@ -91,12 +91,12 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
     align-items:stretch;
     gap:0;
     margin-bottom:26px;
-    background:linear-gradient(135deg, #00a344 0%, #10b981 50%, #22c55e 100%);
+    background:#10b981;
     border-radius:14px;
     box-shadow:
         0 0 0 1px rgba(255,255,255,.10),
-        0 14px 36px rgba(16,185,129,.35),
-        0 0 60px rgba(34,197,94,.25);
+        0 14px 36px rgba(16,185,129,.30),
+        0 0 60px rgba(16,185,129,.18);
     overflow:hidden;
     max-width:100%;
     position:relative;
@@ -959,7 +959,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
     flex-direction:column;
 
 }
-.investimento-card > p{flex:1}
+.investimento-card > p{flex:1;margin-bottom:22px}
 .investimento-card .btn-comprar-uniforme,
 .investimento-card .btn-fazer-matricula{margin-top:auto}
 
@@ -1105,7 +1105,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 BOTÃO COMPRAR UNIFORME
 ==================================================*/
 .btn-comprar-uniforme{
-    margin-top:18px;
+    margin-top:28px;
     width:100%;
     background:var(--blue);
     color:#fff;
@@ -2191,6 +2191,58 @@ CTA MATRÍCULA
     margin-bottom:16px;
 }
 
+/* COOKIE BANNER */
+.cookie-banner{
+    position:fixed;
+    bottom:16px;left:16px;right:16px;
+    max-width:520px;margin:0 auto;
+    background:#fff;
+    border:1px solid rgba(10,30,74,.12);
+    border-left:3px solid var(--blue);
+    border-radius:10px;
+    padding:16px 18px;
+    box-shadow:0 20px 50px rgba(10,30,74,.18);
+    z-index:200;
+    display:none;
+    align-items:center;
+    gap:14px;
+    animation:cookieUp .4s ease;
+}
+@keyframes cookieUp{
+    from{transform:translateY(20px);opacity:0}
+    to{transform:none;opacity:1}
+}
+.cookie-banner.show{display:flex}
+.cookie-text{
+    flex:1;min-width:0;
+    font-size:12.5px;
+    color:var(--gray-600);
+    font-weight:500;
+    line-height:1.5;
+}
+.cookie-text strong{color:var(--navy);font-weight:700}
+.cookie-text a{color:var(--blue);text-decoration:none;font-weight:600}
+.cookie-text a:hover{text-decoration:underline}
+.cookie-btn{
+    background:var(--blue);
+    color:#fff;border:none;
+    padding:9px 18px;
+    border-radius:6px;
+    font-family:"Oswald",sans-serif;
+    font-size:11px;font-weight:600;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    cursor:pointer;
+    flex-shrink:0;
+    transition:.2s;
+}
+.cookie-btn:hover{background:var(--blue-light);transform:translateY(-1px)}
+@media(max-width:480px){
+    .cookie-banner{flex-direction:column;align-items:stretch;gap:12px;padding:14px}
+    .cookie-btn{width:100%}
+    .cookie-text{font-size:12px}
+}
+
 @media(max-width:768px){
   nav ul,.ig-link{display:none}
   .hamburger{display:flex}
@@ -2777,7 +2829,7 @@ img {
         <span class="hero-offer-dot"></span>
       </div>
       <div class="hero-offer-content">
-        <span class="hero-offer-eyebrow">Vagas limitadas</span>
+        <span class="hero-offer-eyebrow">Sua vaga te espera</span>
         <span class="hero-offer-title">MATRÍCULAS 2026 · abrem <strong>07/09</strong></span>
       </div>
       <div class="hero-offer-side">SEGUNDA-FEIRA</div>
@@ -3554,6 +3606,14 @@ HTML: PROFESSORES
   </div>
 </div>
 
+<!-- COOKIE BANNER (LGPD) -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
+  <div class="cookie-text">
+    <strong>Privacidade em primeiro lugar.</strong> Este site não usa cookies de rastreamento. Apenas recursos técnicos essenciais. Saiba mais na nossa <a href="politica-cookies.html">Política de Cookies</a>.
+  </div>
+  <button type="button" class="cookie-btn" onclick="aceitarCookies()">Entendi</button>
+</div>
+
 <footer>
   <div class="footer-grid">
     <div class="f-brand">
@@ -3595,6 +3655,9 @@ HTML: PROFESSORES
         <li><a href="https://wa.me/5516996167588" target="_blank" rel="noopener">+55 16 99616-7588</a></li>
         <li><a href="https://www.instagram.com/independente__oficial/" target="_blank" rel="noopener">@independente__oficial</a></li>
         <li><a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/" target="_blank" rel="noopener noreferrer">Matricule-se</a></li>
+        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+        <li><a href="politica-cookies.html">Política de Cookies</a></li>
+        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
       </ul>
     </div>
   </div>
@@ -3905,6 +3968,23 @@ function gerarPedidoUniforme(e){
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape") closeUniformeModal();
 });
+
+// ============ COOKIE BANNER (LGPD) ============
+(function(){
+  try{
+    if(!localStorage.getItem("ind-cookie-ok")){
+      setTimeout(()=>{
+        const b = document.getElementById("cookieBanner");
+        if(b) b.classList.add("show");
+      }, 800);
+    }
+  }catch(e){}
+})();
+function aceitarCookies(){
+  try{ localStorage.setItem("ind-cookie-ok","1"); }catch(e){}
+  const b = document.getElementById("cookieBanner");
+  if(b) b.classList.remove("show");
+}
 
 // ============ COUNTDOWN MATRÍCULAS 07/09/2026 ============
 (function(){
