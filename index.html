@@ -198,12 +198,69 @@ section{padding:100px 100px}
     margin:0 auto;
 }
 
+CSS PROFESSORES
+.professores{
+    background:#fff;
+    padding:90px 0;
+}
+
+.prof-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:24px;
+    margin-top:50px;
+}
+
+.prof-card{
+    text-align:center;
+}
+
+.prof-card img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:4px;
+    border:2px solid #D6E5FF;
+    transition:.3s;
+}
+
+.prof-card img:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(10,40,120,.15);
+}
+
+.prof-card h4{
+    margin-top:16px;
+    font-family:"Oswald",sans-serif;
+    font-size:20px;
+    color:var(--navy);
+    font-weight:500;
+}
+@media(max-width:1100px){
+    .prof-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .prof-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:480px){
+    .prof-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
 .sport-btn{display:inline-flex;align-items:center;gap:0px;background:var(--blue);color:var(--white);font-family:"Oswald",sans-serif;font-size:12px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;padding:8px 16px;border-radius:4px;text-decoration:none;opacity:0;transform:translateY(8px);transition:0.3s 0.05s;width:fit-content}
 .sport-card:hover .sport-btn{opacity:1;transform:none}
 .sport-btn:hover{background:var(--blue-light)}
 
-.estrutura{background:var(--white--)}
-.estrutura{background:var(--white--)}
+.estrutura{background:var(--white)}
+.estrutura{background:var(--white)}
 .estrutura .section-label,.estrutura h2,.estrutura .section-intro{text-align:right}
 .estrutura h2,.estrutura p,.estrutura span{text-align:right}
 .estrutura .sec-eyebrow{text-align:right}
@@ -594,7 +651,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
     transition:.35s ease;
 
-    box-shadow:0 18px 40px rgba(blue);
+    box-shadow:0 18px 40px rgba(10,30,74,.12);
 
 }
 
@@ -716,8 +773,322 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(30,91,255,0.08);pad
 
 }
 /*==================================================
+COMBO FAMÍLIA
+==================================================*/
+.combo-familia{
+    background:var(--white);
+    padding:110px 0;
+}
+.combo-familia .sec-eyebrow,
+.combo-familia .sec-title,
+.combo-familia .sec-sub{
+    text-align:center;
+}
+.combo-familia .sec-sub{
+    max-width:680px;
+    margin:16px auto 0;
+}
+.combo-familia .container{
+    max-width:1100px;
+}
+.combo-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    margin-top:56px;
+}
+.combo-card{
+    background:var(--navy);
+    border-radius:6px;
+    padding:38px 28px;
+    text-align:center;
+    border-top:4px solid var(--blue);
+    transition:.3s;
+    box-shadow:0 18px 40px rgba(10,30,74,.10);
+}
+.combo-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 28px 55px rgba(10,30,74,.15);
+}
+.combo-icon{
+    width:56px;
+    height:56px;
+    margin:0 auto 18px;
+    background:rgba(30,91,255,.18);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--blue);
+}
+.combo-icon svg{
+    width:26px;
+    height:26px;
+    fill:var(--blue);
+}
+.combo-card h3{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:30px;
+    color:#fff;
+    letter-spacing:.5px;
+    margin-bottom:6px;
+}
+.combo-desc{
+    font-family:"Oswald",sans-serif;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.55);
+    margin-bottom:22px;
+}
+.combo-desconto{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:64px;
+    color:var(--blue);
+    line-height:1;
+}
+.combo-desconto-label{
+    display:block;
+    margin-top:8px;
+    font-family:"Oswald",sans-serif;
+    font-size:11px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.65);
+}
+.combo-obs{
+    max-width:900px;
+    margin:52px auto 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+.combo-obs-item{
+    background:var(--gray-100);
+    border-left:3px solid var(--blue);
+    border-radius:0 4px 4px 0;
+    padding:20px 22px;
+    font-size:13px;
+    color:var(--gray-600);
+    line-height:1.6;
+    font-weight:400;
+}
+.combo-obs-item strong{
+    display:block;
+    font-family:"Oswald",sans-serif;
+    font-size:11px;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    color:var(--navy);
+    font-weight:600;
+    margin-bottom:6px;
+}
+@media(max-width:900px){
+    .combo-familia{padding:70px 20px;}
+    .combo-grid{grid-template-columns:1fr;gap:16px;margin-top:38px;}
+    .combo-card{padding:32px 24px;}
+    .combo-desconto{font-size:56px;}
+    .combo-obs{grid-template-columns:1fr;gap:14px;margin-top:38px;}
+}
+
+/*==================================================
 CTA MATRÍCULA
 ==================================================*/
+/* =========================================================
+   VALORES DAS ATIVIDADES
+   ========================================================= */
+
+.valores {
+    background: var(--gray-100);
+    padding: 100px 0;
+}
+
+.valores-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.valores-table {
+    margin-top: 52px;
+    background: var(--white);
+    border: 1px solid rgba(10, 30, 74, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(10, 30, 74, 0.06);
+}
+
+.valores-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    min-height: 72px;
+    padding: 0 30px;
+    border-bottom: 1px solid rgba(10, 30, 74, 0.07);
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.valores-row:last-child {
+    border-bottom: none;
+}
+
+.valores-row:not(.valores-header):hover {
+    background: rgba(30, 91, 255, 0.035);
+}
+
+.valores-header {
+    min-height: 54px;
+    background: var(--navy);
+    color: var(--white);
+    border-bottom: none;
+}
+
+.valores-header div {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.valores-subheader {
+    min-height: 46px;
+    background: var(--blue);
+    color: var(--white);
+    border-bottom: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valores-subheader div {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+}
+
+.valores-atividade {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--navy);
+    letter-spacing: 0.2px;
+}
+
+.valores-preco {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 27px;
+    color: var(--blue);
+    letter-spacing: 0.4px;
+}
+
+.valores-frequencia {
+    font-family: "Oswald", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.valores-nota {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--gray-400);
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   VALORES — TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .valores {
+        padding: 75px 0;
+    }
+
+    .valores-table {
+        margin-top: 40px;
+    }
+
+    .valores-row {
+        grid-template-columns: 1.8fr 1fr 1fr;
+        padding: 0 20px;
+    }
+
+    .valores-atividade {
+        font-size: 14px;
+    }
+
+    .valores-preco {
+        font-size: 24px;
+    }
+
+    .valores-frequencia {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   VALORES — MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .valores {
+        padding: 65px 0;
+    }
+
+    .valores-table {
+        margin-top: 35px;
+        border-radius: 5px;
+    }
+
+    .valores-row {
+        grid-template-columns: 1.5fr 0.9fr 0.8fr;
+        min-height: 76px;
+        padding: 0 14px;
+    }
+
+    .valores-header {
+        min-height: 48px;
+    }
+
+    .valores-header div {
+        font-size: 9px;
+        letter-spacing: 0.8px;
+    }
+
+    .valores-atividade {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .valores-preco {
+        font-size: 21px;
+    }
+
+    .valores-frequencia {
+        font-size: 9px;
+        line-height: 1.3;
+    }
+
+    .valores-nota {
+        padding: 0 15px;
+        line-height: 1.5;
+    }
+}
 
 .cta-section{
 
@@ -899,7 +1270,7 @@ CTA MATRÍCULA
 }
 /* RESPONSIVO */
 
-@media(max-width:900px)
+@media(max-width:900px){
 
     .investimento-grid{
 
@@ -926,7 +1297,7 @@ CTA MATRÍCULA
 
     }
 
-
+}
 
 @media(max-width:1024px){
   .sports-grid{grid-template-columns:repeat(2,1fr)}
@@ -979,6 +1350,521 @@ CTA MATRÍCULA
 @media(max-width:480px){
   .hero-btns{flex-direction:column;align-items:center}
 }
+
+/* =========================================================
+   RESPONSIVIDADE — AJUSTES FINAIS
+   Mantém o layout original e corrige enquadramento mobile.
+   ========================================================= */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .nav-inner { padding: 0 24px; }
+    .hero-content { max-width: 760px; }
+    .about-grid { gap: 48px; }
+    .prof-grid { gap: 20px; }
+    .footer-grid { gap: 32px; }
+}
+
+@media (max-width: 768px) {
+
+    header { height: 68px; }
+
+    .nav-inner {
+        height: 68px;
+        padding: 0 18px;
+    }
+
+    .nav-logo { gap: 8px; }
+
+    .nav-logo img {
+        height: 58px;
+        width: auto;
+    }
+
+    .nav-logo-text .ey {
+        font-size: 9px;
+        letter-spacing: 1.8px;
+    }
+
+    .nav-logo-text .nm {
+        font-size: 18px;
+        letter-spacing: .7px;
+    }
+
+    .mobile-nav {
+        top: 68px;
+        padding: 16px 18px 24px;
+    }
+
+    .hero {
+        min-height: 620px;
+        height: 100svh;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 680px;
+        padding: 88px 20px 72px;
+    }
+
+    .hero-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2.6px;
+        gap: 9px;
+        margin-bottom: 18px;
+    }
+
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+        width: 22px;
+    }
+
+    .hero h1 {
+        font-size: clamp(50px, 14vw, 76px);
+        line-height: .91;
+        letter-spacing: .5px;
+        margin-bottom: 22px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 32px;
+        max-width: 540px;
+    }
+
+    .hero-btns {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero-btns .btn-cta,
+    .hero-btns .btn-outline {
+        width: min(100%, 300px);
+        text-align: center;
+        padding: 12px 18px;
+    }
+
+    .hero-scroll { bottom: 20px; }
+
+    .stats-inner {
+        padding: 0 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item {
+        min-width: 0;
+        padding: 20px 8px;
+        border-right: 1px solid rgba(10, 30, 74, .08);
+        border-bottom: 1px solid rgba(10, 30, 74, .08);
+    }
+
+    .stat-item:nth-child(2) { border-right: none; }
+    .stat-item:nth-child(3),
+    .stat-item:nth-child(4) { border-bottom: none; }
+
+    .stat-num { font-size: 45px; }
+    .stat-num.inf { font-size: 43px; }
+
+    .stat-label {
+        font-size: 9px;
+        letter-spacing: 1.4px;
+        line-height: 1.35;
+    }
+
+    section { padding: 72px 20px; }
+
+    .about,
+    .modalidades,
+    .professores,
+    .valores,
+    .investimento {
+        padding: 72px 20px;
+    }
+
+    .sec-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .sec-title {
+        font-size: clamp(38px, 11vw, 54px);
+        line-height: .96;
+        margin-bottom: 14px;
+    }
+
+    .sec-sub {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .about-img-wrap { aspect-ratio: 4 / 3; }
+
+    .about-badge {
+        bottom: 14px;
+        left: 14px;
+        font-size: 10px;
+        padding: 7px 11px;
+    }
+
+    .pillars {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 24px;
+    }
+
+    .modalidades .sec-sub {
+        margin: 16px 0 34px;
+    }
+
+    .modalidades-img {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .modalidades-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .estrutura .section-label,
+    .estrutura h2,
+    .estrutura .section-intro,
+    .estrutura p,
+    .estrutura span,
+    .estrutura .sec-eyebrow {
+        text-align: left;
+    }
+
+    .imgs-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 34px;
+    }
+
+    .img-box { aspect-ratio: 16 / 10; }
+
+    .estru-info {
+        padding: 26px 22px;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .estru-info p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .estru-info .btn-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    .uniformes { padding: 72px 20px; }
+
+    .uniformes .sec-sub { margin-bottom: 38px; }
+
+    .uniformes-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .uniforme-info {
+        margin-top: 12px;
+        padding: 20px 22px;
+        min-height: auto;
+    }
+
+    .uniforme-info span { font-size: 29px; }
+
+    .prof-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 14px;
+        margin-top: 36px;
+    }
+
+    .prof-card img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        border-width: 1px;
+    }
+
+    .prof-card h4 {
+        margin-top: 12px;
+        font-size: 16px;
+    }
+
+    .valores { overflow: hidden; }
+
+    .valores-table {
+        width: 100%;
+        margin-top: 36px;
+    }
+
+    .valores-row {
+        grid-template-columns: minmax(0, 1.55fr) minmax(78px, .9fr) minmax(62px, .75fr);
+        padding: 0 13px;
+        min-height: 72px;
+        column-gap: 8px;
+    }
+
+    .valores-header { min-height: 48px; }
+
+    .valores-header div {
+        font-size: 8px;
+        letter-spacing: .7px;
+    }
+
+    .valores-atividade {
+        font-size: 11.5px;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .valores-preco {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .valores-frequencia {
+        font-size: 8.5px;
+        line-height: 1.25;
+    }
+
+    .valores-nota {
+        font-size: 11.5px;
+        margin-top: 22px;
+    }
+
+    .investimento-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 38px;
+    }
+
+    .investimento-card { padding: 26px 22px; }
+
+    .investimento-top { gap: 10px; }
+
+    .investimento-card h3 { font-size: 30px; }
+    .valor { font-size: 34px; }
+
+    .investimento-card p {
+        font-size: 14px;
+    }
+
+    .investimento-total { margin-top: 30px; }
+    .investimento-total strong { font-size: 48px; }
+
+    .cta-section { padding: 65px 20px; }
+
+    .cta-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+        padding: 30px 22px;
+        margin-bottom: 18px;
+    }
+
+    .cta-content h3 { font-size: 29px; }
+
+    .cta-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .btn-nextfit,
+    .btn-whatsapp {
+        width: 100%;
+        max-width: 340px;
+        height: 54px;
+        font-size: 15px;
+    }
+
+    .lider-head { margin-bottom: 36px; }
+    .lider-sub { font-size: 15px; }
+
+    .lider-logos {
+        margin-bottom: 34px;
+        border-width: 1px;
+    }
+
+    .lider-logos img { width: 100%; }
+
+    .lider-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 38px;
+    }
+
+    .lider-stat { padding: 22px 18px; }
+    .lider-stat .stat-num { font-size: 34px; }
+
+    .lider-bio p {
+        font-size: 14px;
+        line-height: 1.75;
+        margin-bottom: 15px;
+    }
+
+    .lider-quote { padding: 32px 22px; }
+    .lider-quote p { font-size: 24px; }
+
+    .contato { padding: 72px 20px; }
+    .contato .sec-sub { margin-bottom: 36px; }
+
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contato-card { padding: 34px 22px; }
+
+    .parceiros { padding: 72px 20px; }
+
+    .sponsors-img { margin-top: 30px; }
+
+    .sponsors-img img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .parceiros-msg {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-top: 30px;
+    }
+
+    footer { padding: 48px 20px 26px; }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 34px;
+    }
+
+    .f-desc { max-width: 330px; }
+
+    .f-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .nav-logo-text .ey { display: none; }
+    .nav-logo-text .nm { font-size: 17px; }
+
+    .hero-content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero h1 {
+        font-size: clamp(46px, 14vw, 64px);
+    }
+
+    .hero p { font-size: 14px; }
+
+    .prof-grid {
+        grid-template-columns: 1fr;
+        max-width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .prof-card h4 { font-size: 18px; }
+
+    .valores-row {
+        grid-template-columns: minmax(0, 1.4fr) minmax(70px, .9fr) minmax(58px, .72fr);
+        min-height: 70px;
+        padding: 0 10px;
+        column-gap: 5px;
+    }
+
+    .valores-atividade { font-size: 10.5px; }
+    .valores-preco { font-size: 18px; }
+    .valores-frequencia { font-size: 8px; }
+    .valores-header div { font-size: 7.5px; }
+
+    .uniforme-info span { font-size: 27px; }
+    .plano-premium-nm { font-size: 38px; }
+    .plano-premium-price { font-size: 44px; }
+}
+
+@media (max-width: 360px) {
+
+    .nav-logo img { height: 52px; }
+    .nav-logo-text .nm { font-size: 15px; }
+
+    .hero h1 { font-size: 44px; }
+    .stat-num { font-size: 39px; }
+
+    .valores-row {
+        grid-template-columns: minmax(0, 1.35fr) minmax(66px, .9fr) minmax(54px, .7fr);
+        padding: 0 8px;
+    }
+
+    .valores-atividade { font-size: 10px; }
+    .valores-preco { font-size: 17px; }
+    .valores-frequencia { font-size: 7.5px; }
+}
+
+/* =========================================================
+   AVISO DE HORÁRIOS
+   ========================================================= */
+
+.horarios-nota {
+    padding: 34px 20px;
+    background: var(--gray-100);
+    text-align: center;
+}
+
+.hora-texto {
+    max-width: 850px;
+    margin: 0 auto;
+    color: var(--gray-600);
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.hora-aviso {
+    max-width: 850px;
+    margin: 10px auto 0;
+    color: var(--gray-400);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .horarios-nota { padding: 28px 20px; }
+
+    .hora-texto {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .hora-aviso { font-size: 11px; }
+}
+
 </style>
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -1162,6 +2048,210 @@ CTA MATRÍCULA
     </div>
 
 </section>
+HTML: PROFESSORES
+<section class="professores" id="professores">
+    <div class="container">
+
+        <div class="lider-head">
+            <div class="sec-eyebrow">NOSSA EQUIPE</div>
+            <h2 class="sec-title">PROFESSORES</h2>
+        </div>
+
+        <div class="prof-grid">
+
+            <div class="prof-card">
+                <img src="image/prof1.jpg" alt="Professor 1">
+                <h4>EM BREVE</h4>
+            </div>
+
+            <div class="prof-card">
+                <img src="image/prof2.jpg" alt="Professor 2">
+                <h4>EM BREVE</h4>
+            </div>
+
+            <div class="prof-card">
+                <img src="image/prof3.jpg" alt="Professor 3">
+                <h4>EM BREVE</h4>
+            </div>
+
+            <div class="prof-card">
+                <img src="image/prof4.jpg" alt="Professor 4">
+                <h4>EM BREVE</h4>
+            </div>
+
+            <div class="prof-card">
+                <img src="image/prof5.jpg" alt="Professor 5">
+                <h4>EM BREVE</h4>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+     VALORES DAS ATIVIDADES
+     ===================================================== -->
+
+<section class="valores" id="valores">
+
+    <div class="container">
+
+        <div class="valores-head">
+
+            <div class="sec-eyebrow rv">
+                Valores
+            </div>
+
+            <h2 class="sec-title rv">
+                Valores das Atividades
+            </h2>
+
+            <p class="sec-sub rv" style="margin: 0 auto;">
+                Confira nossos valores mensais e a frequência
+                de cada atividade.
+            </p>
+
+        </div>
+
+
+        <!-- TABELA DE VALORES -->
+
+        <div class="valores-table rv">
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="valores-row valores-header">
+
+                <div>
+                    Atividade
+                </div>
+
+                <div>
+                    Valor mensal
+                </div>
+
+                <div>
+                    Frequência
+                </div>
+
+            </div>
+
+
+            <!-- FUTEBOL -->
+            <div class="valores-row">
+                <div class="valores-atividade">FUTEBOL</div>
+                <div class="valores-preco">R$ 120,00</div>
+                <div class="valores-frequencia">2× semana</div>
+            </div>
+
+            <!-- BEACH TÊNIS -->
+            <div class="valores-row">
+                <div class="valores-atividade">BEACH TÊNIS</div>
+                <div class="valores-preco">R$ 150,00</div>
+                <div class="valores-frequencia">1× semana</div>
+            </div>
+
+            <!-- BEACH TÊNIS CASAL -->
+            <div class="valores-row">
+                <div class="valores-atividade">BEACH TÊNIS CASAL</div>
+                <div class="valores-preco">R$ 280,00</div>
+                <div class="valores-frequencia">1× semana</div>
+            </div>
+
+            <!-- VÔLEI DE PRAIA -->
+            <div class="valores-row">
+                <div class="valores-atividade">VÔLEI DE PRAIA</div>
+                <div class="valores-preco">R$ 120,00</div>
+                <div class="valores-frequencia">2× semana</div>
+            </div>
+
+            <!-- VÔLEI DE QUADRA -->
+            <div class="valores-row">
+                <div class="valores-atividade">VÔLEI DE QUADRA</div>
+                <div class="valores-preco">R$ 120,00</div>
+                <div class="valores-frequencia">2× semana</div>
+            </div>
+
+            <!-- COMBO VÔLEI -->
+            <div class="valores-row">
+                <div class="valores-atividade">COMBO VÔLEI <small style="display:block;font-size:10px;font-weight:400;color:var(--gray-400);letter-spacing:1px;margin-top:2px">QUADRA + PRAIA</small></div>
+                <div class="valores-preco">R$ 200,00</div>
+                <div class="valores-frequencia">2 modalidades</div>
+            </div>
+
+            <!-- FUNCIONAL ADULTO AREIA -->
+            <div class="valores-row">
+                <div class="valores-atividade">FUNCIONAL ADULTO — AREIA</div>
+                <div class="valores-preco">R$ 100,00</div>
+                <div class="valores-frequencia">2× semana</div>
+            </div>
+
+            <!-- FUNCIONAL CAMPO ADULTO -->
+            <div class="valores-row">
+                <div class="valores-atividade">FUNCIONAL CAMPO — ADULTO</div>
+                <div class="valores-preco">R$ 120,00</div>
+                <div class="valores-frequencia">1× semana</div>
+            </div>
+
+            <!-- FUNCIONAL KIDS AREIA -->
+            <div class="valores-row">
+                <div class="valores-atividade">FUNCIONAL KIDS — AREIA</div>
+                <div class="valores-preco">R$ 80,00</div>
+                <div class="valores-frequencia">2× semana</div>
+            </div>
+
+            <!-- GOLEIRO CAMPO -->
+            <div class="valores-row">
+                <div class="valores-atividade">TREINAMENTO PARA GOLEIRO — CAMPO</div>
+                <div class="valores-preco">R$ 100,00</div>
+                <div class="valores-frequencia">2× semana</div>
+            </div>
+
+            <!-- DAY USE ATÉ 4 -->
+            <div class="valores-row">
+                <div class="valores-atividade">DAY USE — AREIA <small style="display:block;font-size:10px;font-weight:400;color:var(--gray-400);letter-spacing:1px;margin-top:2px">ATÉ 4 PESSOAS</small></div>
+                <div class="valores-preco">R$ 60,00</div>
+                <div class="valores-frequencia">por período</div>
+            </div>
+
+            <!-- DAY USE 5+ -->
+            <div class="valores-row">
+                <div class="valores-atividade">DAY USE — AREIA <small style="display:block;font-size:10px;font-weight:400;color:var(--gray-400);letter-spacing:1px;margin-top:2px">ACIMA DE 5 PESSOAS</small></div>
+                <div class="valores-preco">R$ 20,00</div>
+                <div class="valores-frequencia">por pessoa</div>
+            </div>
+
+            <!-- SUBHEADER ALUGUÉIS -->
+            <div class="valores-subheader">
+                <div>Aluguéis</div>
+            </div>
+
+            <!-- ALUGUEL CAMPO FUTEBOL -->
+            <div class="valores-row">
+                <div class="valores-atividade">ALUGUEL DO CAMPO DE FUTEBOL</div>
+                <div class="valores-preco" style="font-size:18px;font-family:'Oswald',sans-serif;font-weight:500">Consultar</div>
+                <div class="valores-frequencia">Verificar disponibilidade</div>
+            </div>
+
+            <!-- ALUGUEL QUADRA AREIA -->
+            <div class="valores-row">
+                <div class="valores-atividade">ALUGUEL DE QUADRA DE AREIA</div>
+                <div class="valores-preco">R$ 100,00</div>
+                <div class="valores-frequencia">1 hora</div>
+            </div>
+
+        </div>
+
+
+        <p class="valores-nota rv">
+            Valores sujeitos à disponibilidade de horários e vagas.
+        </p>
+
+    </div>
+
+</section>
 
 <section class="investimento" id="investimento">
 
@@ -1189,7 +2279,7 @@ CTA MATRÍCULA
                     <h3>Matrícula</h3>
 
                     <span class="valor">
-                        R$ EM BREVE
+                        R$ 50,00
                     </span>
 
                 </div>
@@ -1208,7 +2298,7 @@ CTA MATRÍCULA
                     <h3>Uniforme Oficial</h3>
 
                     <span class="valor">
-                        R$ EM BREVE
+                        R$ 150,00
                     </span>
 
                 </div>
@@ -1225,12 +2315,76 @@ CTA MATRÍCULA
 
             <small>Investimento Inicial</small>
 
-            <strong>R$ EM BREVE</strong>
+            <strong>R$ 200,00</strong>
 
             <p>
-                Após esse investimento, o aluno paga apenas a mensalidade da modalidade.
+                Uniforme + Matrícula. Primeira mensalidade não inclusa.
             </p>
 
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+     COMBO FAMÍLIA
+     ===================================================== -->
+<section class="combo-familia" id="combo-familia">
+    <div class="container">
+
+        <div class="sec-eyebrow rv">Descontos exclusivos</div>
+        <h2 class="sec-title rv">Combo Família</h2>
+        <p class="sec-sub rv">
+            Traga sua família para o Independente e aproveite descontos progressivos
+            conforme o número de integrantes matriculados.
+        </p>
+
+        <div class="combo-grid">
+
+            <!-- 2 pessoas -->
+            <article class="combo-card rv">
+                <div class="combo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <h3>2 Pessoas</h3>
+                <div class="combo-desc">Duo Independente</div>
+                <div class="combo-desconto">5%</div>
+                <span class="combo-desconto-label">de desconto</span>
+            </article>
+
+            <!-- 3 pessoas -->
+            <article class="combo-card rv d1">
+                <div class="combo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <h3>3 Pessoas</h3>
+                <div class="combo-desc">Trio Independente</div>
+                <div class="combo-desconto">10%</div>
+                <span class="combo-desconto-label">de desconto</span>
+            </article>
+
+            <!-- 4+ pessoas -->
+            <article class="combo-card rv d2">
+                <div class="combo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <h3>4 ou Mais</h3>
+                <div class="combo-desc">Família Independente</div>
+                <div class="combo-desconto">15%</div>
+                <span class="combo-desconto-label">de desconto</span>
+            </article>
+
+        </div>
+
+        <div class="combo-obs rv">
+            <div class="combo-obs-item">
+                <strong>Importante</strong>
+                Beach Tênis Casal e Combo Vôlei já possuem valor promocional e não acumulam desconto do Combo Família.
+            </div>
+            <div class="combo-obs-item">
+                <strong>Day Use</strong>
+                Disponível nos horários de menor movimento, mediante consulta de disponibilidade.
+            </div>
         </div>
 
     </div>
@@ -1256,7 +2410,7 @@ CTA MATRÍCULA
 
             </div>
 
-            <a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6./" target="_blank" class="btn-nextfit">
+            <a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/" target="_blank" class="btn-nextfit">
                 MATRÍCULAS EM BREVE 
             </a>
 
@@ -1289,17 +2443,15 @@ CTA MATRÍCULA
 </section>
 
 
-      </div>
+<section class="horarios-nota" aria-label="Informações sobre horários">
+  <div class="container">
+    <p class="hora-texto">
+      Nosso Centro de Treinamento está em fase final de construção. Em breve, a grade completa de horários estará disponível para todas as modalidades.
+    </p>
 
-      <p class="hora-texto">
-        Nosso Centro de Treinamento está em fase final de construção. Em breve, a grade completa de horários estará disponível para todas as modalidades.
-      </p>
-
-      <p class="hora-aviso">
-        * Os horários de sábado e domingo variam conforme amistosos, campeonatos e eventos do clube.
-      </p>
-
-    </div>
+    <p class="hora-aviso">
+      * Os horários de sábado e domingo variam conforme amistosos, campeonatos e eventos do clube.
+    </p>
   </div>
 </section>
 
@@ -1346,12 +2498,14 @@ CTA MATRÍCULA
         <div class="c-val"><a href="https://wa.me/5516996167588" target="_blank" rel="noopener">+55 16 99616-7588</a></div>
       </div>
       <div class="contato-card rv d1">
-<div class="c-icon">
-    <i class="bi bi-instagram"></i>
-</div>
+        <div class="c-icon">
+          <i class="bi bi-instagram"></i>
+        </div>
         <div class="c-label">Instagram</div>
         <div class="c-val"><a href="https://www.instagram.com/independente__oficial/" target="_blank" rel="noopener">@independente__oficial</a></div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="parceiros" id="parceiros">
@@ -1368,6 +2522,7 @@ CTA MATRÍCULA
 <p class="parceiros-msg">
     Nosso agradecimento aos parceiros que acreditam no esporte e contribuem para o desenvolvimento do Esporte Clube Independente.
 </p>
+  </div>
 </section>
 
 
