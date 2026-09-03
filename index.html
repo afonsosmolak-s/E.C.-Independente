@@ -83,25 +83,48 @@ body.splash-active{overflow:hidden}
     transform:scale(1.35);
 }
 
-/* Anel de energia que expande na saída */
-.splash-burst{
+/* Bola de futebol voadora que fecha a splash */
+.splash-ball{
     position:absolute;
     top:50%;left:50%;
-    width:140px;height:140px;
-    margin:-70px 0 0 -70px;
-    border:2px solid rgba(58,114,255,.8);
-    border-radius:50%;
-    opacity:0;
-    z-index:2;
+    width:80px;height:80px;
+    margin:-40px 0 0 -40px;
+    z-index:4;
     pointer-events:none;
+    opacity:0;
+    filter:drop-shadow(0 20px 40px rgba(0,0,0,.55));
+    will-change:transform,opacity;
 }
-.splash.open .splash-burst{
-    animation:splashBurst .95s cubic-bezier(.22,.61,.36,1) forwards;
+.splash.open .splash-ball{
+    animation:splashBallFly 1.05s cubic-bezier(.42,.02,.24,1) forwards;
 }
-@keyframes splashBurst{
-    0%{opacity:1;transform:scale(1);border-width:3px}
-    60%{opacity:.4;border-width:1px}
-    100%{opacity:0;transform:scale(9);border-width:0}
+@keyframes splashBallFly{
+    0%{
+        opacity:0;
+        transform:translate(85vw,-85vh) scale(.35) rotate(0deg);
+    }
+    5%{opacity:1}
+    50%{
+        opacity:1;
+        transform:translate(0,0) scale(6) rotate(680deg);
+    }
+    62%{
+        transform:translate(0,0) scale(5.5) rotate(720deg);
+    }
+    100%{
+        opacity:0;
+        transform:translate(0,0) scale(26) rotate(920deg);
+    }
+}
+/* Shake no impacto */
+.splash.open{
+    animation:splashShake .18s ease-out .48s;
+}
+@keyframes splashShake{
+    0%,100%{transform:translate(0,0)}
+    25%{transform:translate(-9px,6px)}
+    55%{transform:translate(8px,-5px)}
+    80%{transform:translate(-4px,-3px)}
 }
 
 /* Reveal do site com scale + blur ao final */
@@ -191,26 +214,6 @@ body.splash-reveal header{
     margin-top:2px;
     text-shadow:0 0 24px rgba(58,114,255,.55);
 }
-.splash-skip{
-    position:absolute;
-    bottom:28px;left:50%;
-    transform:translateX(-50%);
-    background:transparent;
-    border:1px solid rgba(255,255,255,.18);
-    color:rgba(255,255,255,.6);
-    padding:7px 16px;
-    border-radius:100px;
-    font-family:"Oswald",sans-serif;
-    font-size:10px;
-    letter-spacing:1.6px;
-    text-transform:uppercase;
-    cursor:pointer;
-    opacity:0;
-    animation:splashFadeUp .6s ease 2.4s forwards;
-    transition:.2s;
-    z-index:4;
-}
-.splash-skip:hover{color:#fff;border-color:rgba(255,255,255,.45)}
 @keyframes splashFadeUp{
     to{opacity:1;transform:none}
 }
@@ -2933,7 +2936,23 @@ img {
   <div class="splash-top"></div>
   <div class="splash-bottom"></div>
   <div class="splash-shine"></div>
-  <div class="splash-burst"></div>
+  <svg class="splash-ball" viewBox="0 0 100 100" aria-hidden="true">
+    <defs>
+      <radialGradient id="ballShade" cx="35%" cy="32%" r="70%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="60%" stop-color="#eef1f6"/>
+        <stop offset="100%" stop-color="#a8b0c0"/>
+      </radialGradient>
+    </defs>
+    <circle cx="50" cy="50" r="47" fill="url(#ballShade)" stroke="#0A1E4A" stroke-width="1.8"/>
+    <polygon points="50,30 63.5,40 58.5,56 41.5,56 36.5,40" fill="#0A1E4A"/>
+    <polygon points="50,30 50,15 62,10 63.5,40" fill="none" stroke="#0A1E4A" stroke-width="1.5"/>
+    <polygon points="63.5,40 78,42 82,55 58.5,56" fill="none" stroke="#0A1E4A" stroke-width="1.5"/>
+    <polygon points="58.5,56 70,72 58,82 50,68" fill="none" stroke="#0A1E4A" stroke-width="1.5"/>
+    <polygon points="41.5,56 50,68 42,82 30,72" fill="none" stroke="#0A1E4A" stroke-width="1.5"/>
+    <polygon points="36.5,40 18,42 22,55 41.5,56" fill="none" stroke="#0A1E4A" stroke-width="1.5"/>
+    <polygon points="36.5,40 38,10 50,15 50,30" fill="none" stroke="#0A1E4A" stroke-width="1.5"/>
+  </svg>
   <div class="splash-content">
     <div class="splash-shield-wrap">
       <img class="splash-shield" src="image/fivecon.png" alt="Escudo Esporte Clube Independente">
@@ -2943,7 +2962,6 @@ img {
       Independente.
       <strong>Por essência.</strong>
     </div>
-    <button type="button" class="splash-skip" onclick="closeSplash()">Pular</button>
   </div>
 </div>
 
@@ -3860,16 +3878,6 @@ HTML: PROFESSORES
   }, 3700);
   try{ sessionStorage.setItem("indep_splash_v1","1") }catch(e){}
 })();
-function closeSplash(){
-  const s = document.getElementById("splash");
-  if(!s) return;
-  s.classList.add("open");
-  document.body.classList.add("splash-reveal");
-  setTimeout(()=>{
-    s.remove();
-    document.body.classList.remove("splash-active");
-  }, 1050);
-}
 
 function toggleMenu(){document.getElementById("mobileNav").classList.toggle("open")}
 function closeMenu(){document.getElementById("mobileNav").classList.remove("open")}
