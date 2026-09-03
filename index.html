@@ -3895,9 +3895,18 @@ function gerarPedidoUniforme(e){
 
     passo(3, "Envie o comprovante e este PDF pra gente",
       "Anexe o comprovante do PIX e este arquivo PDF na conversa. Nossa equipe vai confirmar e combinar a entrega do uniforme.");
+  } else if(pagamento === "Cartão"){
+    passo(1, "Vá até a recepção do complexo",
+      "Rua Emerson Castro Munhoz, 539, Vila Alirdes 2, Nova Europa/SP. CEP 14520-000. Fale com o responsável na recepção pra efetuar o pagamento no cartão (débito ou crédito).");
+
+    passo(2, "Avise a gente pelo WhatsApp",
+      "Antes de ir, clique no botão verde abaixo pra combinar horário e garantir que o responsável estará na recepção quando você chegar.");
+
+    passo(3, "Pague no cartão e leve seu uniforme",
+      "Na recepção, apresente este PDF, efetue o pagamento no cartão com o responsável e já retire seu uniforme oficial na hora.");
   } else {
     passo(1, "Vá até o complexo esportivo",
-      "Rua Emerson Castro Munhoz, 539, Vila Alirdes 2, Nova Europa/SP. CEP 14520-000. Pagamento no local com nossa equipe.");
+      "Rua Emerson Castro Munhoz, 539, Vila Alirdes 2, Nova Europa/SP. CEP 14520-000. Pagamento em dinheiro no local, direto com nossa equipe.");
 
     passo(2, "Avise a gente pelo WhatsApp",
       "Antes de vir, clique no botão verde abaixo pra combinar horário e confirmar que seu uniforme estará pronto quando você chegar.");
