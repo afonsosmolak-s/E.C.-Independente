@@ -3125,32 +3125,18 @@ img {
     <div class="hero-offer">
       <span class="hero-offer-dot"></span>
       <div class="hero-offer-content">
-        <span class="hero-offer-eyebrow">Sua vaga te espera</span>
-        <span class="hero-offer-title">Matrículas 2026 abrem em <strong>07/09</strong></span>
+        <span class="hero-offer-eyebrow">Nova Europa · SP</span>
+        <span class="hero-offer-title">Complexo esportivo <strong>oficial</strong></span>
       </div>
-      <span class="hero-offer-side">Segunda</span>
     </div>
 
     <h1>Formando Atletas.<br><span class="acc">Construindo Pessoas.</span></h1>
     <p>Aqui a gente treina duro, joga junto e cresce como família. Um espaço feito pra quem ama esporte, do primeiro chute ao gol da vida.</p>
 
-    <div class="hero-countdown" id="heroCountdown" aria-label="Tempo até abertura das matrículas">
-      <div class="countdown-label">Faltam apenas</div>
-      <div class="countdown-grid">
-        <div class="countdown-cell"><span class="countdown-num" id="cd-d">00</span><span class="countdown-txt">Dias</span></div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-cell"><span class="countdown-num" id="cd-h">00</span><span class="countdown-txt">Horas</span></div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-cell"><span class="countdown-num" id="cd-m">00</span><span class="countdown-txt">Min</span></div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-cell"><span class="countdown-num" id="cd-s">00</span><span class="countdown-txt">Seg</span></div>
-      </div>
-    </div>
-
     <div class="hero-btns">
-      <a href="https://wa.me/5516996167588?text=Ol%C3%A1!%20Quero%20garantir%20minha%20vaga%20nas%20matr%C3%ADculas%202026%20do%20Independente." target="_blank" rel="noopener" class="btn-hero-primary" id="btnHeroPrimary">
+      <a href="https://wa.me/5516996167588?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Esporte%20Clube%20Independente." target="_blank" rel="noopener" class="btn-hero-primary">
         <i class="bi bi-whatsapp"></i>
-        <span id="btnHeroPrimaryTxt">Garantir minha vaga</span>
+        <span>Fale com a gente</span>
       </a>
       <a href="#investimento" class="btn-hero-secondary">
         Ver planos
@@ -4307,53 +4293,6 @@ function aceitarCookies(){
   if(b) b.classList.remove("show");
 }
 
-// ============ COUNTDOWN MATRÍCULAS 07/09/2026 ============
-(function(){
-  const alvo = new Date("2026-09-07T00:00:00-03:00").getTime();
-  const NEXTFIT = "https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/";
-  const dEl = document.getElementById("cd-d");
-  const hEl = document.getElementById("cd-h");
-  const mEl = document.getElementById("cd-m");
-  const sEl = document.getElementById("cd-s");
-  const box = document.getElementById("heroCountdown");
-  const btn = document.getElementById("btnHeroPrimary");
-  const btnTxt = document.getElementById("btnHeroPrimaryTxt");
-  const offerTitle = document.querySelector(".hero-offer-title");
-  const offerEyebrow = document.querySelector(".hero-offer-eyebrow");
-  const offerSide = document.querySelector(".hero-offer-side");
-  if(!dEl) return;
-
-  const pad = n => String(n).padStart(2,"0");
-
-  function tick(){
-    const diff = alvo - Date.now();
-    if(diff <= 0){
-      box.classList.add("aberto");
-      document.querySelector(".countdown-label").textContent = "Matrículas abertas";
-      if(offerEyebrow) offerEyebrow.textContent = "Vagas abertas agora";
-      if(offerTitle) offerTitle.innerHTML = "MATRÍCULAS 2026 · <strong>ABERTAS</strong>";
-      if(offerSide) offerSide.textContent = "GARANTA JÁ";
-      if(btn){
-        btn.href = NEXTFIT;
-        btn.target = "_blank";
-        btn.rel = "noopener";
-        btn.querySelector("i").className = "bi bi-arrow-right-circle-fill";
-        btnTxt.textContent = "Fazer minha matrícula";
-      }
-      return;
-    }
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const s = Math.floor((diff % (1000*60)) / 1000);
-    dEl.textContent = pad(d);
-    hEl.textContent = pad(h);
-    mEl.textContent = pad(m);
-    sEl.textContent = pad(s);
-  }
-  tick();
-  setInterval(tick, 1000);
-})();
 document.addEventListener("click",function(e){
   const m=document.getElementById("mobileNav");
   const h=document.querySelector(".hamburger");
