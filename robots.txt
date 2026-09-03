@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /image/exemplo*
+Disallow: /image/a.jpg
+Disallow: /image/wpp2.png
+Disallow: /image/fivecon.png
+Disallow: /image/favicon-512.png
+
+Sitemap: https://ecindependente.com/sitemap.xml
+Host: https://ecindependente.com
