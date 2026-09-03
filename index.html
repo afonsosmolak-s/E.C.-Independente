@@ -1225,14 +1225,14 @@ MODAL COMPRA DE UNIFORME
 
 .uniforme-pagamento-opts{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
     margin-top:6px;
 }
 .uniforme-pagamento-opt{
     border:1px solid rgba(10,30,74,.15);
     border-radius:8px;
-    padding:12px 10px;
+    padding:11px 8px;
     text-align:center;
     cursor:pointer;
     transition:.2s;
@@ -1249,9 +1249,12 @@ MODAL COMPRA DE UNIFORME
     margin-bottom:2px;
 }
 .uniforme-pagamento-opt-sub{
-    font-size:10px;
+    font-size:9.5px;
     color:var(--gray-400);
     line-height:1.3;
+}
+@media(max-width:480px){
+    .uniforme-pagamento-opts{grid-template-columns:1fr}
 }
 .uniforme-pagamento-opt:has(input:checked){
     border-color:var(--blue);
@@ -3519,17 +3522,21 @@ HTML: PROFESSORES
             <label for="uf-tamanho">Tamanho da camiseta</label>
             <select id="uf-tamanho" name="tamanho" required>
               <option value="">Selecione</option>
-              <option>PP</option>
-              <option>P</option>
-              <option>M</option>
-              <option>G</option>
-              <option>GG</option>
-              <option>XG</option>
-              <option>Infantil 6</option>
-              <option>Infantil 8</option>
-              <option>Infantil 10</option>
-              <option>Infantil 12</option>
-              <option>Infantil 14</option>
+              <optgroup label="Infantil (número)">
+                <option>4</option>
+                <option>6</option>
+                <option>8</option>
+                <option>10</option>
+                <option>12</option>
+                <option>14</option>
+              </optgroup>
+              <optgroup label="Adulto">
+                <option>P</option>
+                <option>M</option>
+                <option>G</option>
+                <option>GG</option>
+                <option>3G</option>
+              </optgroup>
             </select>
           </div>
           <div class="uniforme-form-group">
@@ -3547,8 +3554,13 @@ HTML: PROFESSORES
               <div class="uniforme-pagamento-opt-sub">Pague pelo app do banco</div>
             </label>
             <label class="uniforme-pagamento-opt">
+              <input type="radio" name="pagamento" value="Cartão">
+              <div class="uniforme-pagamento-opt-title">Cartão</div>
+              <div class="uniforme-pagamento-opt-sub">Débito/crédito na recepção</div>
+            </label>
+            <label class="uniforme-pagamento-opt">
               <input type="radio" name="pagamento" value="Presencial">
-              <div class="uniforme-pagamento-opt-title">Presencial</div>
+              <div class="uniforme-pagamento-opt-title">Dinheiro</div>
               <div class="uniforme-pagamento-opt-sub">Diretamente no complexo</div>
             </label>
           </div>
