@@ -110,6 +110,11 @@ body.splash-active{overflow:hidden}
 .splash.open .splash-shield-wrap{
     animation:splashShieldBoom 1.1s cubic-bezier(.55,.06,.28,1) forwards !important;
 }
+@media(min-width:769px){
+    .splash.open .splash-shield-wrap{
+        animation-duration:.7s !important;
+    }
+}
 @keyframes splashShieldBoom{
     0%{opacity:1;transform:scale(1) rotate(0)}
     18%{transform:scale(.88) rotate(-3deg)}
