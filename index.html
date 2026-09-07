@@ -394,6 +394,202 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .hero-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:2.2px;text-transform:uppercase;font-weight:500;z-index:2}
 .scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,var(--blue),transparent);animation:pulse 2s ease-in-out infinite}
 
+/* =========================================================
+   HERO — CAMPANHA MATRÍCULAS ABERTAS
+   ========================================================= */
+
+/* Sublinhado animado no destaque do H1 */
+.hero h1 .acc{position:relative;display:inline-block}
+.hero h1 .acc::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:-4px;
+    height:3px;
+    background:linear-gradient(90deg, transparent, #00e676 20%, #3a72ff 80%, transparent);
+    border-radius:3px;
+    transform-origin:center;
+    animation:heroUnderline 3.4s ease-in-out infinite;
+    box-shadow:0 0 12px rgba(0,230,118,.5);
+}
+@keyframes heroUnderline{
+    0%,100%{transform:scaleX(.35);opacity:.5}
+    50%{transform:scaleX(1);opacity:1}
+}
+
+/* TICKER FULL-WIDTH */
+.hero-ticker{
+    width:100vw;
+    margin-left:calc(-50vw + 50%);
+    margin-top:34px;
+    margin-bottom:32px;
+    overflow:hidden;
+    background:linear-gradient(90deg, #00c853, #00e676 50%, #00c853);
+    padding:12px 0;
+    box-shadow:
+        0 12px 40px rgba(0,200,83,.45),
+        0 -6px 30px rgba(0,200,83,.25),
+        inset 0 1px 0 rgba(255,255,255,.25);
+    border-top:1px solid rgba(255,255,255,.15);
+    border-bottom:1px solid rgba(0,0,0,.15);
+    position:relative;
+}
+.hero-ticker::before,
+.hero-ticker::after{
+    content:"";
+    position:absolute;
+    top:0;bottom:0;
+    width:60px;
+    z-index:2;
+    pointer-events:none;
+}
+.hero-ticker::before{
+    left:0;
+    background:linear-gradient(90deg, rgba(6,15,40,.5), transparent);
+}
+.hero-ticker::after{
+    right:0;
+    background:linear-gradient(-90deg, rgba(6,15,40,.5), transparent);
+}
+.hero-ticker-track{
+    display:flex;
+    width:fit-content;
+    animation:heroTicker 28s linear infinite;
+    will-change:transform;
+}
+.hero-ticker-content{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+    padding-right:14px;
+    font-family:"Bebas Neue",sans-serif;
+    font-size:clamp(30px, 5vw, 46px);
+    color:#062e14;
+    letter-spacing:2.5px;
+    line-height:1;
+    white-space:nowrap;
+    font-weight:400;
+    text-shadow:0 1px 0 rgba(255,255,255,.30);
+}
+.hero-ticker-content > span{
+    display:inline-block;
+    font-size:.75em;
+    animation:heroTickerFlash 1.2s ease-in-out infinite alternate;
+    color:#0A1E4A;
+    filter:drop-shadow(0 0 6px rgba(255,255,255,.6));
+}
+@keyframes heroTicker{
+    from{transform:translateX(0)}
+    to{transform:translateX(-50%)}
+}
+@keyframes heroTickerFlash{
+    from{opacity:.55;transform:scale(.9)}
+    to{opacity:1;transform:scale(1.1)}
+}
+
+/* CTA MEGA EXPLOSIVA */
+.hero-btns-mega{
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    margin-top:0;
+}
+.btn-hero-explode{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    padding:20px 44px;
+    background:linear-gradient(120deg,#1e5bff 0%,#3a72ff 20%,#00e676 45%,#3a72ff 70%,#1e5bff 100%);
+    background-size:300% 100%;
+    color:#fff;
+    font-family:"Bebas Neue",sans-serif;
+    font-size:clamp(24px, 3.4vw, 34px);
+    letter-spacing:3px;
+    text-decoration:none;
+    border-radius:14px;
+    text-transform:uppercase;
+    font-weight:400;
+    line-height:1;
+    box-shadow:
+        0 22px 60px rgba(30,91,255,.5),
+        0 0 55px rgba(0,230,118,.35),
+        inset 0 1px 0 rgba(255,255,255,.22);
+    animation:
+        heroCtaGrad 5s linear infinite,
+        heroCtaPulse 2.4s ease-in-out infinite;
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    max-width:100%;
+}
+.btn-hero-explode::before{
+    content:"";
+    position:absolute;
+    top:0;left:-100%;
+    width:55%;height:100%;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent);
+    animation:heroCtaShine 3.2s ease-in-out infinite;
+    z-index:1;
+}
+.btn-hero-explode > *{position:relative;z-index:2}
+.btn-hero-explode i{font-size:.85em;line-height:1}
+.btn-hero-explode i:first-child{
+    color:#ffe066;
+    filter:drop-shadow(0 0 8px rgba(255,224,102,.75));
+    animation:heroCtaBolt 1.6s ease-in-out infinite;
+}
+.btn-hero-explode:hover{
+    animation-play-state:paused;
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:
+        0 30px 70px rgba(30,91,255,.65),
+        0 0 80px rgba(0,230,118,.55);
+}
+@keyframes heroCtaGrad{
+    0%{background-position:0% 50%}
+    100%{background-position:300% 50%}
+}
+@keyframes heroCtaPulse{
+    0%,100%{transform:translateY(0) scale(1)}
+    50%{transform:translateY(-2px) scale(1.015)}
+}
+@keyframes heroCtaShine{
+    0%,45%{left:-100%}
+    75%{left:150%}
+    100%{left:150%}
+}
+@keyframes heroCtaBolt{
+    0%,100%{transform:scale(1) rotate(-3deg)}
+    50%{transform:scale(1.18) rotate(6deg)}
+}
+
+.btn-hero-secondary-2{
+    padding:11px 24px;
+    font-size:11px;
+    letter-spacing:1.6px;
+    opacity:.75;
+    transition:.25s;
+}
+.btn-hero-secondary-2:hover{opacity:1}
+
+/* Motion reduced */
+@media(prefers-reduced-motion:reduce){
+    .hero-ticker-track,
+    .hero-ticker-content > span,
+    .btn-hero-explode,
+    .btn-hero-explode::before,
+    .btn-hero-explode i:first-child,
+    .hero h1 .acc::after{animation:none}
+}
+
+@media(max-width:640px){
+    .hero-ticker{margin-top:26px;margin-bottom:26px;padding:9px 0}
+    .hero-ticker-content{gap:10px;padding-right:10px;letter-spacing:1.8px}
+    .btn-hero-explode{padding:16px 26px;gap:10px;width:min(100%, 340px);letter-spacing:2px;border-radius:12px}
+    .btn-hero-explode i{font-size:.9em}
+    .hero-btns-mega{gap:12px}
+}
+
 /* HERO CAMPAIGN — MATRÍCULAS (BADGE MINIMAL PREMIUM) */
 .hero-offer{
     display:inline-flex;
@@ -3122,37 +3318,29 @@ img {
   <div class="hero-ov"></div>
   <div class="hero-content">
 
-    <div class="hero-offer">
-      <span class="hero-offer-dot"></span>
-      <div class="hero-offer-content">
-        <span class="hero-offer-eyebrow">Sua vaga te espera</span>
-        <span class="hero-offer-title">Matrículas 2026 abrem em <strong>07/09</strong></span>
-      </div>
-      <span class="hero-offer-side">Segunda</span>
-    </div>
-
     <h1>Formando Atletas.<br><span class="acc">Construindo Pessoas.</span></h1>
     <p>Aqui a gente treina duro, joga junto e cresce como família. Um espaço feito pra quem ama esporte, do primeiro chute ao gol da vida.</p>
 
-    <div class="hero-countdown" id="heroCountdown" aria-label="Tempo até abertura das matrículas">
-      <div class="countdown-label">Faltam apenas</div>
-      <div class="countdown-grid">
-        <div class="countdown-cell"><span class="countdown-num" id="cd-d">00</span><span class="countdown-txt">Dias</span></div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-cell"><span class="countdown-num" id="cd-h">00</span><span class="countdown-txt">Horas</span></div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-cell"><span class="countdown-num" id="cd-m">00</span><span class="countdown-txt">Min</span></div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-cell"><span class="countdown-num" id="cd-s">00</span><span class="countdown-txt">Seg</span></div>
+    <!-- TICKER FULL-WIDTH -->
+    <div class="hero-ticker" aria-label="Matrículas abertas">
+      <div class="hero-ticker-track">
+        <div class="hero-ticker-content">
+          <span>⚡</span> Matrículas Abertas <span>⚡</span> Garanta Já <span>⚡</span> Matrículas Abertas <span>⚡</span> Garanta Já <span>⚡</span> Matrículas Abertas <span>⚡</span> Garanta Já <span>⚡</span> Matrículas Abertas <span>⚡</span> Garanta Já
+        </div>
+        <div class="hero-ticker-content" aria-hidden="true">
+          <span>⚡</span> Matrículas Abertas <span>⚡</span> Garanta Já <span>⚡</span> Matrículas Abertas <span>⚡</span> Garanta Já <span>⚡</span> Matrículas Abertas <span>⚡</span> Garanta Já <span>⚡</span> Matrículas Abertas <span>⚡</span> Garanta Já
+        </div>
       </div>
     </div>
 
-    <div class="hero-btns">
-      <a href="https://wa.me/5516996167588?text=Ol%C3%A1!%20Quero%20garantir%20minha%20vaga%20no%20Esporte%20Clube%20Independente." target="_blank" rel="noopener" class="btn-hero-primary" id="btnHeroPrimary">
-        <i class="bi bi-whatsapp"></i>
-        <span id="btnHeroPrimaryTxt">Garantir minha vaga</span>
+    <!-- CTA GIGANTE -->
+    <div class="hero-btns hero-btns-mega">
+      <a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/" target="_blank" rel="noopener" class="btn-hero-explode">
+        <i class="bi bi-lightning-charge-fill"></i>
+        <span>Fazer minha matrícula</span>
+        <i class="bi bi-arrow-right"></i>
       </a>
-      <a href="#investimento" class="btn-hero-secondary">
+      <a href="#investimento" class="btn-hero-secondary btn-hero-secondary-2">
         Ver planos
       </a>
     </div>
@@ -4307,53 +4495,6 @@ function aceitarCookies(){
   if(b) b.classList.remove("show");
 }
 
-// ============ COUNTDOWN MATRÍCULAS 07/09/2026 ============
-(function(){
-  const alvo = new Date("2026-09-07T00:00:00-03:00").getTime();
-  const NEXTFIT = "https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/";
-  const dEl = document.getElementById("cd-d");
-  const hEl = document.getElementById("cd-h");
-  const mEl = document.getElementById("cd-m");
-  const sEl = document.getElementById("cd-s");
-  const box = document.getElementById("heroCountdown");
-  const btn = document.getElementById("btnHeroPrimary");
-  const btnTxt = document.getElementById("btnHeroPrimaryTxt");
-  const offerTitle = document.querySelector(".hero-offer-title");
-  const offerEyebrow = document.querySelector(".hero-offer-eyebrow");
-  const offerSide = document.querySelector(".hero-offer-side");
-  if(!dEl) return;
-
-  const pad = n => String(n).padStart(2,"0");
-
-  function tick(){
-    const diff = alvo - Date.now();
-    if(diff <= 0){
-      box.classList.add("aberto");
-      document.querySelector(".countdown-label").textContent = "Matrículas abertas";
-      if(offerEyebrow) offerEyebrow.textContent = "Vagas abertas agora";
-      if(offerTitle) offerTitle.innerHTML = "MATRÍCULAS 2026 · <strong>ABERTAS</strong>";
-      if(offerSide) offerSide.textContent = "GARANTA JÁ";
-      if(btn){
-        btn.href = NEXTFIT;
-        btn.target = "_blank";
-        btn.rel = "noopener";
-        btn.querySelector("i").className = "bi bi-arrow-right-circle-fill";
-        btnTxt.textContent = "Fazer minha matrícula";
-      }
-      return;
-    }
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const s = Math.floor((diff % (1000*60)) / 1000);
-    dEl.textContent = pad(d);
-    hEl.textContent = pad(h);
-    mEl.textContent = pad(m);
-    sEl.textContent = pad(s);
-  }
-  tick();
-  setInterval(tick, 1000);
-})();
 document.addEventListener("click",function(e){
   const m=document.getElementById("mobileNav");
   const h=document.querySelector(".hamburger");
