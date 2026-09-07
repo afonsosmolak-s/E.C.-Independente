@@ -488,8 +488,9 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
         inset 0 -3px 0 rgba(0,0,0,.10);
     border:1px solid rgba(255,255,255,.18);
     max-width:min(560px, calc(100% - 20px));
-    text-align:left;
+    text-align:center;
 }
+.hero-billboard-body{display:flex;flex-direction:column;align-items:center}
 .hero-billboard::before,
 .hero-billboard::after{
     content:"";
@@ -503,27 +504,32 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .hero-billboard::before{left:14px}
 .hero-billboard::after{right:14px}
 
-/* DESKTOP — posiciona o outdoor absoluto na esquerda */
+/* DESKTOP — posiciona o outdoor absoluto no canto sup-esquerdo */
 @media(min-width:1000px){
     .hero-content{max-width:900px}
     .hero-billboard-hang{
         position:absolute;
-        left:-80px;
-        top:210px;
+        left:60px;
+        top:150px;
         margin:0;
-        max-width:380px;
+        max-width:300px;
     }
-    .hero-billboard{padding:24px 34px 22px;max-width:380px}
-    .hero-billboard-main{font-size:56px}
+    .hero-billboard{padding:20px 28px 18px;max-width:300px}
+    .hero-billboard-main{font-size:44px}
+    .hero-billboard-sub{font-size:10.5px;letter-spacing:2px}
+    .hero-billboard-tag{font-size:9.5px;padding:4px 10px}
+    .hero-billboard-string-l,
+    .hero-billboard-string-r{height:52px;top:-40px}
+    .hero-billboard-nail{top:-46px}
 }
 @media(min-width:1280px){
     .hero-billboard-hang{
-        left:-140px;
-        top:200px;
-        max-width:420px;
+        left:80px;
+        top:145px;
+        max-width:340px;
     }
-    .hero-billboard{max-width:420px}
-    .hero-billboard-main{font-size:64px}
+    .hero-billboard{max-width:340px;padding:22px 30px 20px}
+    .hero-billboard-main{font-size:50px}
 }
 .hero-billboard-body{
     position:relative;
