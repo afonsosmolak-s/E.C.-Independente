@@ -504,32 +504,34 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .hero-billboard::before{left:14px}
 .hero-billboard::after{right:14px}
 
-/* DESKTOP — posiciona o outdoor absoluto no canto sup-esquerdo */
+/* DESKTOP — posiciona o outdoor absoluto no canto sup-esquerdo DO HERO (não do hero-content) */
 @media(min-width:1000px){
     .hero-content{max-width:900px}
     .hero-billboard-hang{
         position:absolute;
-        left:60px;
         top:150px;
+        /* calc(-50vw + 50% + 40) = 40px da borda esquerda do viewport */
+        left:calc(-50vw + 50% + 40px);
         margin:0;
-        max-width:300px;
+        max-width:280px;
+        z-index:5;
     }
-    .hero-billboard{padding:20px 28px 18px;max-width:300px}
-    .hero-billboard-main{font-size:44px}
-    .hero-billboard-sub{font-size:10.5px;letter-spacing:2px}
-    .hero-billboard-tag{font-size:9.5px;padding:4px 10px}
+    .hero-billboard{padding:20px 28px 18px;max-width:280px}
+    .hero-billboard-main{font-size:44px !important}
+    .hero-billboard-sub{font-size:10.5px !important;letter-spacing:2px}
+    .hero-billboard-tag{font-size:9.5px !important;padding:4px 10px}
     .hero-billboard-string-l,
     .hero-billboard-string-r{height:52px;top:-40px}
     .hero-billboard-nail{top:-46px}
 }
 @media(min-width:1280px){
     .hero-billboard-hang{
-        left:80px;
         top:145px;
-        max-width:340px;
+        left:calc(-50vw + 50% + 60px);
+        max-width:320px;
     }
-    .hero-billboard{max-width:340px;padding:22px 30px 20px}
-    .hero-billboard-main{font-size:50px}
+    .hero-billboard{max-width:320px;padding:22px 30px 20px}
+    .hero-billboard-main{font-size:50px !important}
 }
 .hero-billboard-body{
     position:relative;
@@ -3531,7 +3533,6 @@ img {
   <div class="hero-content">
 
     <h1>Formando Atletas.<br><span class="acc">Construindo Pessoas.</span></h1>
-    <p>Aqui a gente treina duro, joga junto e cresce como família. Um espaço feito pra quem ama esporte, do primeiro chute ao gol da vida.</p>
 
     <!-- OUTDOOR PENDURADO -->
     <div class="hero-billboard-hang" aria-label="Matrículas abertas">
@@ -3546,6 +3547,8 @@ img {
         </div>
       </div>
     </div>
+
+    <p>Aqui a gente treina duro, joga junto e cresce como família. Um espaço feito pra quem ama esporte, do primeiro chute ao gol da vida.</p>
 
     <!-- CTA GIGANTE -->
     <div class="hero-btns hero-btns-mega">
