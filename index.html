@@ -416,12 +416,65 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
     50%{transform:scaleX(1);opacity:1}
 }
 
-/* OUTDOOR — ESTILO CARTAZ DE RUA */
+/* OUTDOOR PENDURADO — WRAP HANGING */
+.hero-billboard-hang{
+    position:relative;
+    display:inline-block;
+    margin:78px auto 32px;
+    transform-origin:top center;
+    animation:hangSway 5s ease-in-out infinite;
+}
+@keyframes hangSway{
+    0%,100%{transform:rotate(-1.2deg)}
+    50%{transform:rotate(1.2deg)}
+}
+/* PREGO */
+.hero-billboard-nail{
+    position:absolute;
+    top:-60px;left:50%;
+    width:14px;height:14px;
+    background:radial-gradient(circle at 35% 35%, #d8dae0, #3a3f4a 70%);
+    border-radius:50%;
+    transform:translateX(-50%);
+    box-shadow:
+        0 3px 6px rgba(0,0,0,.5),
+        inset 0 -2px 3px rgba(0,0,0,.4);
+    z-index:2;
+}
+.hero-billboard-nail::after{
+    content:"";
+    position:absolute;
+    top:5px;left:5px;
+    width:4px;height:4px;
+    background:radial-gradient(circle, #fff, transparent);
+    border-radius:50%;
+}
+/* STRINGS */
+.hero-billboard-string{
+    position:absolute;
+    top:-52px;
+    width:2px;
+    background:linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.15) 100%);
+    box-shadow:0 0 4px rgba(0,0,0,.35);
+    transform-origin:top center;
+    z-index:1;
+}
+.hero-billboard-string-l{
+    left:26px;
+    height:64px;
+    transform:rotate(-14deg);
+}
+.hero-billboard-string-r{
+    right:26px;
+    height:64px;
+    transform:rotate(14deg);
+}
+
+/* CARTAZ */
 .hero-billboard{
     position:relative;
     display:inline-block;
     padding:26px 44px 24px;
-    margin:38px auto 32px;
     background:
         linear-gradient(180deg, rgba(255,255,255,.05), transparent 30%),
         linear-gradient(135deg, #00c853 0%, #00e676 100%);
@@ -436,11 +489,6 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
     border:1px solid rgba(255,255,255,.18);
     max-width:min(560px, calc(100% - 20px));
     text-align:left;
-    animation:heroBillboardIdle 4s ease-in-out infinite;
-}
-@keyframes heroBillboardIdle{
-    0%,100%{transform:rotate(-2.5deg) translateY(0)}
-    50%{transform:rotate(-2.2deg) translateY(-3px)}
 }
 .hero-billboard::before,
 .hero-billboard::after{
@@ -454,14 +502,28 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 }
 .hero-billboard::before{left:14px}
 .hero-billboard::after{right:14px}
-.hero-billboard-tape{
-    position:absolute;
-    top:-14px;left:50%;
-    width:96px;height:26px;
-    background:rgba(10,30,74,.75);
-    border:1px dashed rgba(255,255,255,.25);
-    transform:translateX(-50%) rotate(-1deg);
-    box-shadow:0 3px 8px rgba(0,0,0,.25);
+
+/* DESKTOP — posiciona o outdoor absoluto na esquerda */
+@media(min-width:1000px){
+    .hero-content{max-width:900px}
+    .hero-billboard-hang{
+        position:absolute;
+        left:-80px;
+        top:210px;
+        margin:0;
+        max-width:380px;
+    }
+    .hero-billboard{padding:24px 34px 22px;max-width:380px}
+    .hero-billboard-main{font-size:56px}
+}
+@media(min-width:1280px){
+    .hero-billboard-hang{
+        left:-140px;
+        top:200px;
+        max-width:420px;
+    }
+    .hero-billboard{max-width:420px}
+    .hero-billboard-main{font-size:64px}
 }
 .hero-billboard-body{
     position:relative;
@@ -584,12 +646,137 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 }
 .btn-hero-secondary-2:hover{opacity:1}
 
+/* ============ FAB "MATRÍCULAS ABERTAS" ============ */
+.mfab{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:190;
+    display:inline-flex;
+    align-items:center;
+    text-decoration:none;
+    opacity:0;
+    transform:translateY(24px) scale(.85);
+    pointer-events:none;
+    transition:opacity .5s ease, transform .5s cubic-bezier(.34,1.4,.64,1);
+}
+.mfab.on{opacity:1;transform:none;pointer-events:auto}
+.mfab-ring{
+    position:absolute;
+    inset:-4px;
+    border-radius:100px;
+    background:radial-gradient(closest-side, rgba(0,230,118,.55), transparent 70%);
+    animation:mfabRing 2.2s ease-out infinite;
+    z-index:0;
+    pointer-events:none;
+}
+.mfab-ring2{
+    position:absolute;
+    inset:-4px;
+    border-radius:100px;
+    background:radial-gradient(closest-side, rgba(58,114,255,.35), transparent 70%);
+    animation:mfabRing 2.2s ease-out .9s infinite;
+    z-index:0;
+    pointer-events:none;
+}
+@keyframes mfabRing{
+    0%{transform:scale(1);opacity:.7}
+    100%{transform:scale(1.55);opacity:0}
+}
+.mfab-inner{
+    position:relative;
+    z-index:2;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:13px 22px;
+    background:linear-gradient(120deg, #00c853 0%, #00e676 30%, #26e37e 60%, #00c853 100%);
+    background-size:250% 100%;
+    color:#062e14;
+    font-family:"Bebas Neue",sans-serif;
+    font-size:18px;
+    letter-spacing:2px;
+    border-radius:100px;
+    border:1px solid rgba(255,255,255,.35);
+    box-shadow:
+        0 14px 34px rgba(0,200,83,.45),
+        0 0 22px rgba(0,230,118,.35),
+        inset 0 1px 0 rgba(255,255,255,.4),
+        inset 0 -2px 0 rgba(0,0,0,.08);
+    animation:mfabGrad 5s linear infinite, mfabPulse 2.4s ease-in-out infinite;
+    overflow:hidden;
+    isolation:isolate;
+}
+.mfab-inner::before{
+    content:"";
+    position:absolute;
+    top:0;left:-100%;
+    width:50%;height:100%;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent);
+    animation:mfabShine 3.5s ease-in-out infinite;
+    z-index:1;
+}
+.mfab-inner > *{position:relative;z-index:2}
+.mfab-inner i{font-size:20px;line-height:0}
+.mfab:hover .mfab-inner{
+    transform:translateY(-2px);
+    box-shadow:
+        0 20px 44px rgba(0,200,83,.55),
+        0 0 32px rgba(0,230,118,.5),
+        inset 0 1px 0 rgba(255,255,255,.5);
+}
+@keyframes mfabGrad{
+    0%{background-position:0% 50%}
+    100%{background-position:250% 50%}
+}
+@keyframes mfabPulse{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-3px)}
+}
+@keyframes mfabShine{
+    0%,55%{left:-100%}
+    85%{left:150%}
+    100%{left:150%}
+}
+.mfab-close{
+    position:absolute;
+    top:-6px;right:-6px;
+    width:22px;height:22px;
+    background:#0A1E4A;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    line-height:0;
+    cursor:pointer;
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 4px 8px rgba(0,0,0,.4);
+    z-index:3;
+    text-decoration:none;
+    transition:transform .2s;
+}
+.mfab-close:hover{transform:scale(1.1);color:#fff}
+/* Bump FAB acima do cookie banner quando visível */
+.cookie-banner.show ~ .mfab{bottom:118px}
+@media(max-width:640px){
+    .mfab{right:14px;bottom:14px}
+    .mfab-inner{padding:11px 18px;font-size:15px;letter-spacing:1.4px;gap:8px}
+    .mfab-inner i{font-size:17px}
+    .cookie-banner.show ~ .mfab{bottom:190px}
+}
+
 /* Motion reduced */
 @media(prefers-reduced-motion:reduce){
-    .hero-billboard,
+    .hero-billboard-hang,
     .btn-hero-explode,
     .btn-hero-explode::before,
-    .hero h1 .acc::after{animation:none}
+    .hero h1 .acc::after,
+    .mfab-inner,
+    .mfab-inner::before,
+    .mfab-ring,
+    .mfab-ring2{animation:none}
 }
 
 @media(max-width:640px){
@@ -3340,13 +3527,17 @@ img {
     <h1>Formando Atletas.<br><span class="acc">Construindo Pessoas.</span></h1>
     <p>Aqui a gente treina duro, joga junto e cresce como família. Um espaço feito pra quem ama esporte, do primeiro chute ao gol da vida.</p>
 
-    <!-- OUTDOOR TILTED -->
-    <div class="hero-billboard" aria-label="Matrículas abertas">
-      <div class="hero-billboard-tape"></div>
-      <div class="hero-billboard-body">
-        <span class="hero-billboard-tag">Agora · 2026</span>
-        <span class="hero-billboard-main">Matrículas<br>Abertas</span>
-        <span class="hero-billboard-sub">Garanta sua vaga · Fale com o clube</span>
+    <!-- OUTDOOR PENDURADO -->
+    <div class="hero-billboard-hang" aria-label="Matrículas abertas">
+      <span class="hero-billboard-nail"></span>
+      <span class="hero-billboard-string hero-billboard-string-l"></span>
+      <span class="hero-billboard-string hero-billboard-string-r"></span>
+      <div class="hero-billboard">
+        <div class="hero-billboard-body">
+          <span class="hero-billboard-tag">Agora · 2026</span>
+          <span class="hero-billboard-main">Matrículas<br>Abertas</span>
+          <span class="hero-billboard-sub">Garanta sua vaga · Fale com o clube</span>
+        </div>
       </div>
     </div>
 
@@ -4110,6 +4301,19 @@ HTML: PROFESSORES
   </div>
 </div>
 
+<!-- FAB FLUTUANTE MATRÍCULAS -->
+<a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/" target="_blank" rel="noopener" class="mfab" id="mfab" aria-label="Matrículas Abertas - Fazer matrícula">
+  <span class="mfab-ring" aria-hidden="true"></span>
+  <span class="mfab-ring2" aria-hidden="true"></span>
+  <span class="mfab-inner">
+    <span>Matrículas Abertas</span>
+    <i class="bi bi-arrow-right-circle-fill"></i>
+  </span>
+  <span class="mfab-close" onclick="event.preventDefault();event.stopPropagation();document.getElementById('mfab').style.display='none';" aria-label="Fechar" role="button">
+    <i class="bi bi-x"></i>
+  </span>
+</a>
+
 <!-- COOKIE BANNER (LGPD) -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
   <div class="cookie-text">
@@ -4199,6 +4403,20 @@ HTML: PROFESSORES
 
 function toggleMenu(){document.getElementById("mobileNav").classList.toggle("open")}
 function closeMenu(){document.getElementById("mobileNav").classList.remove("open")}
+
+// ============ FAB "Matrículas Abertas" — aparece após scroll do hero ============
+(function(){
+  const fab = document.getElementById("mfab");
+  const hero = document.getElementById("inicio");
+  if(!fab || !hero) return;
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting) fab.classList.remove("on");
+      else fab.classList.add("on");
+    });
+  }, {threshold:0.15});
+  io.observe(hero);
+})();
 
 // ============ MODAL UNIFORME ============
 const UNIFORME_PRECO = 150;
