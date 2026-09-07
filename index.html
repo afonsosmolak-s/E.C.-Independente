@@ -504,31 +504,33 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 .hero-billboard::before{left:14px}
 .hero-billboard::after{right:14px}
 
-/* DESKTOP — posiciona o outdoor absoluto no canto sup-esquerdo DO HERO (não do hero-content) */
+/* DESKTOP — posiciona o outdoor absoluto no canto sup-esquerdo DO HERO */
 @media(min-width:1000px){
     .hero-content{max-width:900px}
     .hero-billboard-hang{
         position:absolute;
-        top:14px;
-        /* calc(-50vw + 50% + 40) = 40px da borda esquerda do viewport */
-        left:calc(-50vw + 50% + 40px);
+        top:74px;
+        left:calc(-50vw + 50% + 32px);
         margin:0;
-        max-width:280px;
+        max-width:210px;
         z-index:5;
     }
-    .hero-billboard{padding:20px 28px 18px;max-width:280px}
-    .hero-billboard-main{font-size:44px !important}
-    .hero-billboard-sub{font-size:10.5px !important;letter-spacing:2px}
-    .hero-billboard-tag{font-size:9.5px !important;padding:4px 10px}
+    .hero-billboard{padding:14px 20px 12px;max-width:210px;border-radius:5px}
+    .hero-billboard-main{font-size:30px !important;line-height:.9}
+    .hero-billboard-sub{font-size:9px !important;letter-spacing:1.5px;margin-top:8px}
+    .hero-billboard-tag{font-size:8.5px !important;padding:3px 8px;letter-spacing:2px;margin-bottom:8px}
+    .hero-billboard::before,.hero-billboard::after{width:9px;height:9px;top:9px}
+    .hero-billboard::before{left:9px}
+    .hero-billboard::after{right:9px}
 }
 @media(min-width:1280px){
     .hero-billboard-hang{
-        top:14px;
-        left:calc(-50vw + 50% + 60px);
-        max-width:320px;
+        top:74px;
+        left:calc(-50vw + 50% + 44px);
+        max-width:240px;
     }
-    .hero-billboard{max-width:320px;padding:22px 30px 20px}
-    .hero-billboard-main{font-size:50px !important}
+    .hero-billboard{max-width:240px;padding:16px 22px 14px}
+    .hero-billboard-main{font-size:34px !important}
 }
 .hero-billboard-body{
     position:relative;
@@ -785,17 +787,19 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 }
 
 @media(max-width:640px){
+    .hero-billboard-hang{margin:14px auto 20px}
     .hero-billboard{
-        padding:22px 26px 20px;
-        margin:28px auto 26px;
+        padding:15px 20px 13px;
         transform:rotate(-2deg);
-        max-width:calc(100% - 20px);
+        max-width:calc(100% - 40px);
+        border-radius:5px;
     }
-    .hero-billboard-tape{width:78px;height:22px;top:-11px}
-    .hero-billboard-main{font-size:clamp(38px, 12vw, 60px)}
-    .hero-billboard-sub{font-size:11px;letter-spacing:2px}
-    .hero-billboard-tag{font-size:10px;padding:4px 10px}
-    .hero-billboard::before,.hero-billboard::after{width:10px;height:10px;top:10px}
+    .hero-billboard-main{font-size:32px !important;line-height:.9;letter-spacing:1.4px}
+    .hero-billboard-sub{font-size:9.5px !important;letter-spacing:1.5px;margin-top:8px}
+    .hero-billboard-tag{font-size:9px !important;padding:3px 9px;letter-spacing:2px;margin-bottom:8px}
+    .hero-billboard::before,.hero-billboard::after{width:8px;height:8px;top:8px}
+    .hero-billboard::before{left:8px}
+    .hero-billboard::after{right:8px}
     .btn-hero-explode{padding:16px 26px;gap:10px;width:min(100%, 340px);letter-spacing:2px;border-radius:12px}
     .btn-hero-explode i{font-size:.9em}
     .hero-btns-mega{gap:12px}
