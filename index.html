@@ -432,10 +432,41 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
     position:relative;
     color:#22c55e;
     text-shadow:
-        0 0 24px rgba(34,197,94,.35),
-        0 0 48px rgba(34,197,94,.15);
+        0 0 6px rgba(34,197,94,.85),
+        0 0 22px rgba(34,197,94,.55),
+        0 0 48px rgba(34,197,94,.25);
     display:inline-block;
+    animation:neonFlicker 8.5s steps(1) 2.6s infinite;
 }
+/* Flicker estilo neon com curto-circuito */
+@keyframes neonFlicker{
+    0%, 18%, 21%, 23.5%, 25%, 26.5%, 44%, 47%, 48.5%, 74%, 76%, 77.5%, 100%{
+        opacity:1;
+        color:#22c55e;
+        text-shadow:
+            0 0 6px rgba(34,197,94,.85),
+            0 0 22px rgba(34,197,94,.55),
+            0 0 48px rgba(34,197,94,.25);
+    }
+    19%, 22.5%, 24.5%, 45.5%, 75%{
+        opacity:.25;
+        color:rgba(34,197,94,.45);
+        text-shadow:none;
+    }
+    45%, 76.5%{
+        opacity:.85;
+        text-shadow:
+            0 0 3px rgba(34,197,94,.6),
+            0 0 8px rgba(34,197,94,.3);
+    }
+    24%{
+        opacity:.15;
+        color:rgba(34,197,94,.2);
+        text-shadow:none;
+    }
+}
+/* Squiggle acompanha o flicker */
+.htm-abertas.on-flicker .htm-squiggle{filter:drop-shadow(0 0 3px rgba(34,197,94,.3))}
 .htm-squiggle{
     position:absolute;
     bottom:-.11em;
@@ -667,61 +698,41 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
     align-items:center;
     justify-content:center;
     gap:14px;
-    padding:20px 44px;
-    background:linear-gradient(120deg,#1e5bff 0%,#3a72ff 20%,#00e676 45%,#3a72ff 70%,#1e5bff 100%);
-    background-size:300% 100%;
+    padding:14px 30px;
+    background:rgba(255,255,255,.04);
     color:#fff;
-    font-family:"Bebas Neue",sans-serif;
-    font-size:clamp(24px, 3.4vw, 34px);
-    letter-spacing:3px;
+    font-family:"Oswald",sans-serif;
+    font-size:13px;
+    letter-spacing:2.8px;
     text-decoration:none;
-    border-radius:14px;
+    border:1px solid rgba(255,255,255,.28);
+    border-radius:100px;
     text-transform:uppercase;
-    font-weight:400;
+    font-weight:500;
     line-height:1;
-    box-shadow:
-        0 22px 60px rgba(30,91,255,.5),
-        0 0 55px rgba(0,230,118,.35),
-        inset 0 1px 0 rgba(255,255,255,.22);
-    animation:
-        heroCtaGrad 5s linear infinite,
-        heroCtaPulse 2.4s ease-in-out infinite;
+    backdrop-filter:blur(8px);
+    transition:.35s cubic-bezier(.4,0,.2,1);
     position:relative;
-    overflow:hidden;
-    isolation:isolate;
     max-width:100%;
 }
-.btn-hero-explode::before{
-    content:"";
-    position:absolute;
-    top:0;left:-100%;
-    width:55%;height:100%;
-    background:linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent);
-    animation:heroCtaShine 3.2s ease-in-out infinite;
-    z-index:1;
+.btn-hero-explode > *{position:relative}
+.btn-hero-explode i{
+    font-size:.85em;
+    line-height:1;
+    transition:transform .35s cubic-bezier(.4,0,.2,1), color .35s;
+    color:#22c55e;
 }
-.btn-hero-explode > *{position:relative;z-index:2}
-.btn-hero-explode i{font-size:.85em;line-height:1;transition:transform .3s ease}
-.btn-hero-explode:hover i{transform:translateX(6px)}
 .btn-hero-explode:hover{
-    animation-play-state:paused;
-    transform:translateY(-3px) scale(1.02);
-    box-shadow:
-        0 30px 70px rgba(30,91,255,.65),
-        0 0 80px rgba(0,230,118,.55);
+    background:rgba(34,197,94,.10);
+    border-color:rgba(34,197,94,.7);
+    color:#fff;
+    letter-spacing:3.2px;
+    box-shadow:0 12px 30px rgba(34,197,94,.18);
+    transform:translateY(-1px);
 }
-@keyframes heroCtaGrad{
-    0%{background-position:0% 50%}
-    100%{background-position:300% 50%}
-}
-@keyframes heroCtaPulse{
-    0%,100%{transform:translateY(0) scale(1)}
-    50%{transform:translateY(-2px) scale(1.015)}
-}
-@keyframes heroCtaShine{
-    0%,45%{left:-100%}
-    75%{left:150%}
-    100%{left:150%}
+.btn-hero-explode:hover i{
+    transform:translateX(5px);
+    color:#4ade80;
 }
 
 .btn-hero-secondary-2{
@@ -856,14 +867,17 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
 
 /* Motion reduced */
 @media(prefers-reduced-motion:reduce){
-    .hero-billboard-hang,
+    .htm-abertas,
     .btn-hero-explode,
-    .btn-hero-explode::before,
-    .hero h1 .acc::after,
     .mfab-inner,
     .mfab-inner::before,
     .mfab-ring,
-    .mfab-ring2{animation:none}
+    .mfab-ring2{animation:none !important}
+    .htm-abertas{
+        opacity:1 !important;
+        color:#22c55e !important;
+        text-shadow:0 0 8px rgba(34,197,94,.5) !important;
+    }
 }
 
 @media(max-width:640px){
