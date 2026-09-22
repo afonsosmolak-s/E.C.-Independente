@@ -616,11 +616,23 @@ nav a[href="#inicio"]::after{
 /* Título — "Abertas" verde + "2026" branco na mesma linha */
 .htm-year-inline{
     color:#fff;
-    font-family:"Bebas Neue",sans-serif;
-    letter-spacing:1.5px;
+    font-family:"Caveat",cursive;
+    font-weight:700;
+    font-size:.62em;
+    letter-spacing:0;
+    line-height:.9;
+    transform:rotate(-4deg) translateY(-.05em);
+    display:inline-block;
     opacity:0;
-    animation:htmFadeUp .9s cubic-bezier(.23,1,.32,1) .8s forwards;
-    text-shadow:0 0 14px rgba(255,255,255,.35);
+    animation:htmYearInline 1s cubic-bezier(.34,1.56,.64,1) 1s forwards;
+    text-shadow:
+        0 0 18px rgba(255,255,255,.45),
+        0 0 36px rgba(255,255,255,.2);
+    margin-left:.08em;
+}
+@keyframes htmYearInline{
+    from{opacity:0;transform:rotate(-10deg) translateY(.3em) scale(.7)}
+    to{opacity:1;transform:rotate(-4deg) translateY(-.05em) scale(1)}
 }
 
 /* SUBTITLE novo — small caps */
