@@ -476,33 +476,45 @@ nav a[href="#inicio"]::after{
     .hero-content.hero-layout-final{grid-template-columns:auto auto 230px;gap:20px}
 }
 @media(max-width:960px){
-    .hero{min-height:auto;padding:100px 0 40px}
+    .hero{min-height:auto !important;padding:100px 0 40px}
     .hero-content.hero-layout-final{
-        grid-template-columns:1fr;
-        gap:28px;
-        padding:0 22px;
-        text-align:center;
-        justify-items:center;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:flex-start !important;
+        gap:28px !important;
+        padding:0 22px !important;
+        text-align:center !important;
+        max-width:100% !important;
     }
-    .hero-vdivider{display:none}
+    .hero-vdivider{display:none !important}
     .hero-main-col{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        width:100%;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        width:100% !important;
+        text-align:center !important;
     }
+    .hero-eyebrow-v2{justify-content:center !important;margin-bottom:16px}
     .hero .hero-title-mega{
-        font-size:clamp(46px, 13vw, 88px);
-        text-align:center;
+        font-size:clamp(46px, 13vw, 88px) !important;
+        text-align:center !important;
+        align-items:center !important;
+        display:flex !important;
+        flex-direction:column !important;
+        margin-bottom:18px !important;
     }
+    .hero .hero-title-mega .htm-line-1{text-align:center;display:block}
     .hero .hero-title-mega .htm-line-2{
-        justify-content:center;
-        gap:.1em;
+        justify-content:center !important;
+        gap:.1em !important;
     }
+    .hero .hero-tagline-v2{text-align:center;letter-spacing:3px;font-size:12px;margin-bottom:22px}
     .hero-pilares{
-        max-width:360px;
-        width:100%;
-        padding:12px;
+        max-width:360px !important;
+        width:100% !important;
+        padding:12px !important;
+        position:static !important;
     }
     .pilar-card{padding:12px 14px;font-size:13px;gap:12px}
     .pilar-icon{width:34px;height:34px;font-size:14px}
@@ -580,17 +592,24 @@ nav a[href="#inicio"]::after{
     line-height:1.4;
 }
 @media(max-width:960px){
-    .hero-decor-bottom{position:static;padding:32px 22px 0;margin-top:8px}
+    .hero-decor-bottom{
+        position:static !important;
+        padding:32px 22px 0 !important;
+        margin-top:8px !important;
+        inset:auto !important;
+    }
     .decor-bottom-inner{
-        flex-direction:column;
-        gap:22px;
-        align-items:center;
-        text-align:center;
+        flex-direction:column !important;
+        gap:22px !important;
+        align-items:center !important;
+        justify-content:center !important;
+        text-align:center !important;
+        max-width:100% !important;
     }
     .decor-bottom-left,.decor-bottom-right{
-        justify-content:center;
-        text-align:center;
-        width:100%;
+        justify-content:center !important;
+        text-align:center !important;
+        width:100% !important;
     }
     .decor-bottom-left .decor-tagline,
     .decor-bottom-right .decor-year{text-align:center;display:inline-block;max-width:100%}
