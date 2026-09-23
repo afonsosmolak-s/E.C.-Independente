@@ -476,7 +476,12 @@ nav a[href="#inicio"]::after{
     .hero-content.hero-layout-final{grid-template-columns:auto auto 230px;gap:20px}
 }
 @media(max-width:960px){
-    .hero{min-height:auto !important;padding:100px 0 40px}
+    .hero{
+        min-height:auto !important;
+        padding:100px 0 40px;
+        flex-direction:column !important;
+        justify-content:flex-start !important;
+    }
     .hero-content.hero-layout-final{
         display:flex !important;
         flex-direction:column !important;
@@ -5085,7 +5090,7 @@ HTML: PROFESSORES
   </div>
   <div class="f-bottom">
     <span>© 2026 Esporte Clube Independente. Todos os direitos reservados.</span>
-    <span class="f-credit">Criado por <a href="https://zmolak.com/" target="_blank" rel="noopener">Smolak Studio</a></span>
+    <span class="f-credit">Criado por <a href="https://zmolak.com/" target="_blank" rel="noopener">Zmolak Technology</a></span>
     <span>Paixão · Disciplina · Superação</span>
   </div>
 </footer>
