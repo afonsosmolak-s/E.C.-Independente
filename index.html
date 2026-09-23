@@ -563,7 +563,16 @@ nav a[href="#inicio"]::after{
         width:100% !important;
         text-align:center !important;
     }
-    .hero-eyebrow-v2{justify-content:center !important;margin-bottom:16px}
+    .hero-eyebrow-v2{
+        justify-content:center !important;
+        margin-bottom:16px;
+        white-space:nowrap;
+        font-size:9.5px;
+        letter-spacing:2.5px;
+        gap:10px;
+    }
+    .hero-eyebrow-v2 .he-line{width:22px}
+    .hero-eyebrow-v2 .he-txt{white-space:nowrap}
     .hero .hero-title-mega{
         font-size:clamp(46px, 13vw, 88px) !important;
         text-align:center !important;
@@ -4289,7 +4298,8 @@ img {
     <div class="hero-main-col">
       <div class="hero-eyebrow-v2">
         <span class="he-line"></span>
-        <span>Disciplina · Evolução · Pertencimento</span>
+        <span class="he-txt">Disciplina · Evolução · Pertencimento</span>
+        <span class="he-line"></span>
       </div>
 
       <h1 class="hero-title-mega">
