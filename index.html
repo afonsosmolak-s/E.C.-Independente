@@ -503,33 +503,22 @@ nav a[href="#inicio"]::after{
 .decor-bottom-left{
     display:flex;
     align-items:center;
-    gap:18px;
 }
-.decor-bottom-left .decor-bars{
-    width:70px;
-    height:34px;
-    display:block;
-    filter:drop-shadow(0 0 10px rgba(34,197,94,.55));
-}
-.decor-bottom-text .decor-tagline{
+.decor-bottom-left .decor-tagline{
     font-family:"Oswald",sans-serif;
     font-size:12px;
     font-weight:600;
     letter-spacing:2.4px;
     text-transform:uppercase;
     color:rgba(255,255,255,.85);
+    padding-bottom:6px;
+    border-bottom:2px solid #22c55e;
+    box-shadow:0 2px 0 -1px rgba(34,197,94,.35);
+    line-height:1.4;
 }
 .decor-bottom-right{
     display:flex;
     align-items:center;
-    gap:14px;
-}
-.decor-bottom-right .decor-line{
-    width:40px;
-    height:2px;
-    background:#22c55e;
-    box-shadow:0 0 8px rgba(34,197,94,.6);
-    border-radius:2px;
 }
 .decor-bottom-right .decor-year{
     font-family:"Oswald",sans-serif;
@@ -537,8 +526,12 @@ nav a[href="#inicio"]::after{
     font-weight:600;
     letter-spacing:2px;
     text-transform:uppercase;
-    color:rgba(255,255,255,.7);
+    color:rgba(255,255,255,.75);
     text-shadow:none;
+    padding-bottom:6px;
+    border-bottom:2px solid #22c55e;
+    box-shadow:0 2px 0 -1px rgba(34,197,94,.35);
+    line-height:1.4;
 }
 @media(max-width:960px){
     .hero-decor-bottom{position:static;padding:20px 24px 0;margin-top:20px}
@@ -4199,17 +4192,9 @@ img {
   <div class="hero-decor-bottom" aria-hidden="false">
     <div class="decor-bottom-inner">
       <div class="decor-bottom-left">
-        <svg class="decor-bars" viewBox="0 0 120 42" fill="none" aria-hidden="true">
-          <rect x="10" y="4" width="98" height="6" rx="1" fill="#22c55e" transform="skewX(-22)"/>
-          <rect x="10" y="18" width="98" height="6" rx="1" fill="#22c55e" transform="skewX(-22)"/>
-          <rect x="10" y="32" width="98" height="6" rx="1" fill="#22c55e" transform="skewX(-22)"/>
-        </svg>
-        <div class="decor-bottom-text">
-          <span class="decor-tagline">O futuro também se treina aqui.</span>
-        </div>
+        <span class="decor-tagline">O futuro também se treina aqui.</span>
       </div>
       <div class="decor-bottom-right">
-        <div class="decor-line"></div>
         <span class="decor-year">Complexo esportivo em fase final de construção</span>
       </div>
     </div>
