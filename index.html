@@ -475,12 +475,70 @@ nav a[href="#inicio"]::after{
 @media(max-width:1200px){
     .hero-content.hero-layout-final{grid-template-columns:auto auto 230px;gap:20px}
 }
+/* Pilares MOBILE (grid 2x2) — hidden em desktop */
+.hero-pilares-mobile{display:none}
+.hero-cta-mobile{display:none}
+
 @media(max-width:960px){
     .hero{
         min-height:auto !important;
         padding:100px 0 40px;
         flex-direction:column !important;
         justify-content:flex-start !important;
+    }
+    /* Card liquid glass some no mobile */
+    .hero-pilares{display:none !important}
+    /* CTA desktop dentro do main-col some (usaremos o mobile) */
+    .hero-main-col .btn-garanta{display:none !important}
+    /* Pilares 2x2 entra cinematograficamente */
+    .hero-pilares-mobile{
+        display:grid !important;
+        grid-template-columns:1fr 1fr;
+        gap:16px 20px;
+        width:100%;
+        max-width:340px;
+        margin:14px auto 8px;
+        padding:0 12px;
+    }
+    .pilar-mini{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        color:rgba(255,255,255,.88);
+        font-family:"Oswald",sans-serif;
+        font-size:12px;
+        letter-spacing:1.3px;
+        text-transform:uppercase;
+        font-weight:600;
+        opacity:0;
+        transform:translateY(14px);
+        animation:pilarMiniIn .7s cubic-bezier(.23,1,.32,1) calc(1.2s + var(--i, 0) * .18s) forwards;
+        line-height:1.2;
+    }
+    .pilar-mini i{
+        color:#3a72ff;
+        font-size:16px;
+        flex-shrink:0;
+        text-shadow:0 0 12px rgba(58,114,255,.5);
+    }
+    @keyframes pilarMiniIn{
+        from{opacity:0;transform:translateY(14px)}
+        to{opacity:1;transform:translateY(0)}
+    }
+    /* CTA mobile fica em baixo */
+    .hero-cta-mobile{
+        display:flex !important;
+        justify-content:center;
+        padding:8px 22px 0;
+        margin-top:16px;
+        width:100%;
+    }
+    .hero-cta-mobile .btn-garanta{
+        opacity:0;
+        animation:htmFadeUp .7s ease 2.1s forwards;
+        padding:15px 32px;
+        font-size:12px;
+        letter-spacing:2.4px;
     }
     .hero-content.hero-layout-final{
         display:flex !important;
@@ -599,8 +657,8 @@ nav a[href="#inicio"]::after{
 @media(max-width:960px){
     .hero-decor-bottom{
         position:static !important;
-        padding:32px 22px 0 !important;
-        margin-top:8px !important;
+        padding:0 22px !important;
+        margin-top:36px !important;
         inset:auto !important;
     }
     .decor-bottom-inner{
@@ -4248,7 +4306,7 @@ img {
     <!-- DIVIDER VERTICAL VERDE -->
     <div class="hero-vdivider" aria-hidden="true"></div>
 
-    <!-- COLUNA CENTRAL — Pilares -->
+    <!-- COLUNA CENTRAL — Pilares (DESKTOP) -->
     <aside class="hero-pilares">
       <div class="pilar-card">
         <div class="pilar-icon"><i class="bi bi-dribbble"></i></div>
@@ -4270,6 +4328,14 @@ img {
 
   </div>
 
+  <!-- PILARES MOBILE (grid 2x2 cinematográfico) -->
+  <div class="hero-pilares-mobile" aria-hidden="true">
+    <div class="pilar-mini" style="--i:0"><i class="bi bi-dribbble"></i><span>Esporte</span></div>
+    <div class="pilar-mini" style="--i:1"><i class="bi bi-people-fill"></i><span>Formação</span></div>
+    <div class="pilar-mini" style="--i:2"><i class="bi bi-graph-up-arrow"></i><span>Evolução</span></div>
+    <div class="pilar-mini" style="--i:3"><i class="bi bi-trophy-fill"></i><span>Grandes Histórias</span></div>
+  </div>
+
   <!-- DECOR embaixo do hero -->
   <div class="hero-decor-bottom" aria-hidden="false">
     <div class="decor-bottom-inner">
@@ -4280,6 +4346,14 @@ img {
         <span class="decor-year">Complexo esportivo em fase final de construção</span>
       </div>
     </div>
+  </div>
+
+  <!-- CTA MOBILE (última coisa do hero no mobile) -->
+  <div class="hero-cta-mobile">
+    <a href="https://publico.nextfit.com.br/externo/024ced13-0c61-4930-949a-2041f61a77e6/" target="_blank" rel="noopener" class="btn-garanta">
+      <span>Garanta sua vaga</span>
+      <i class="bi bi-arrow-right"></i>
+    </a>
   </div>
 </section>
 
