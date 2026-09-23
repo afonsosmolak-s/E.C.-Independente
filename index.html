@@ -647,6 +647,14 @@ nav a[href="#inicio"]::after{
         display:inline-block;
     }
     .pilar-mini span{display:inline-block;line-height:1.25}
+    /* Coluna direita: espelhado (texto | ícone), ícone "fora" à direita */
+    .pilar-mini:nth-child(2n){
+        grid-template-columns:1fr 18px;
+        text-align:right;
+        justify-items:end;
+    }
+    .pilar-mini:nth-child(2n) i{order:2}
+    .pilar-mini:nth-child(2n) span{order:1}
     @keyframes pilarMiniIn{
         from{opacity:0;transform:translateY(14px)}
         to{opacity:1;transform:translateY(0)}
